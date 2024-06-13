@@ -3,12 +3,30 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-06-13T22:02:10+08:00</updated>
+    <updated>2024-06-13T22:06:31+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
     <id>https://sharenjun.github.io</id>
 
+    <entry>
+        <title>2024宁波赛线下赛AWD</title>
+        <author>
+            <name>d1omg</name>
+        </author>
+        <link href="https://sharenjun.github.io/2024ning-bo-sai-xian-xia-sai-awd.html"/>
+        <id>https://sharenjun.github.io/2024ning-bo-sai-xian-xia-sai-awd.html</id>
+            <category term="Web"/>
+
+        <updated>2024-06-13T22:06:31+08:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <p>#全场都上waf没得玩。web手纯坐牢
+#占个坑位,要得把源码审一下</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>2024.6.13日记</title>
         <author>
