@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>d1omg blog</title>
-    <link href="https://sharenjun.githun.io/feed.xml" rel="self" />
-    <link href="https://sharenjun.githun.io" />
+    <link href="https://sharenjun.github.io/feed.xml" rel="self" />
+    <link href="https://sharenjun.github.io" />
     <updated>2024-06-13T14:32:11+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
-    <id>https://sharenjun.githun.io</id>
+    <id>https://sharenjun.github.io</id>
 
     <entry>
         <title>欢迎lmq女士来看我的blog</title>
         <author>
             <name>d1omg</name>
         </author>
-        <link href="https://sharenjun.githun.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html"/>
-        <id>https://sharenjun.githun.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html</id>
+        <link href="https://sharenjun.github.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html"/>
+        <id>https://sharenjun.github.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html</id>
 
         <updated>2024-06-13T14:32:11+08:00</updated>
             <summary></summary>
@@ -26,8 +26,8 @@
         <author>
             <name>d1omg</name>
         </author>
-        <link href="https://sharenjun.githun.io/dasda.html"/>
-        <id>https://sharenjun.githun.io/dasda.html</id>
+        <link href="https://sharenjun.github.io/dasda.html"/>
+        <id>https://sharenjun.github.io/dasda.html</id>
 
         <updated>2024-06-13T14:27:53+08:00</updated>
             <summary>

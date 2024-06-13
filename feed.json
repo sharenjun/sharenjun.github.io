@@ -2,16 +2,16 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "d1omg blog",
     "description": "",
-    "home_page_url": "https://sharenjun.githun.io",
-    "feed_url": "https://sharenjun.githun.io/feed.json",
+    "home_page_url": "https://sharenjun.github.io",
+    "feed_url": "https://sharenjun.github.io/feed.json",
     "user_comment": "",
     "author": {
         "name": "d1omg"
     },
     "items": [
         {
-            "id": "https://sharenjun.githun.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html",
-            "url": "https://sharenjun.githun.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html",
+            "id": "https://sharenjun.github.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html",
+            "url": "https://sharenjun.github.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html",
             "title": "欢迎lmq女士来看我的blog",
             "author": {
                 "name": "d1omg"
@@ -22,8 +22,8 @@
             "date_modified": "2024-06-13T14:32:11+08:00"
         },
         {
-            "id": "https://sharenjun.githun.io/dasda.html",
-            "url": "https://sharenjun.githun.io/dasda.html",
+            "id": "https://sharenjun.github.io/dasda.html",
+            "url": "https://sharenjun.github.io/dasda.html",
             "title": "dasda",
             "summary": "dawiodjawodjawdiasjojz hvjzxnc zms, n,aSN cjkzsdndfjkasnkdnKcjlzS ",
             "content_html": "<p>dawiodjawodjawdiasjojz hvjzxnc zms, n,aSN cjkzsdndfjkasnkdnKcjlzS </p>",

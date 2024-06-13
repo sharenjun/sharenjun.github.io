@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="https://sharenjun.githun.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://sharenjun.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
-<loc>https://sharenjun.githun.io/</loc>
+<loc>https://sharenjun.github.io/</loc>
 </url>
 <url>
-<loc>https://sharenjun.githun.io/dasda.html</loc>
+<loc>https://sharenjun.github.io/dasda.html</loc>
 <lastmod>2024-06-13T14:27:53+08:00</lastmod>
 </url>
 <url>
-<loc>https://sharenjun.githun.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html</loc>
+<loc>https://sharenjun.github.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html</loc>
 <lastmod>2024-06-13T14:32:11+08:00</lastmod>
 </url>
 </urlset>
