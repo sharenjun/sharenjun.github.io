@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>d1omg blog</title>
+    <link href="https://sharenjun.githun.io/feed.xml" rel="self" />
+    <link href="https://sharenjun.githun.io" />
+    <updated>2024-06-13T14:27:53+08:00</updated>
+    <author>
+        <name>d1omg</name>
+    </author>
+    <id>https://sharenjun.githun.io</id>
+
+    <entry>
+        <title>dasda</title>
+        <author>
+            <name>d1omg</name>
+        </author>
+        <link href="https://sharenjun.githun.io/dasda.html"/>
+        <id>https://sharenjun.githun.io/dasda.html</id>
+
+        <updated>2024-06-13T14:27:53+08:00</updated>
+            <summary>
+                <![CDATA[
+                    dawiodjawodjawdiasjojz hvjzxnc zms, n,aSN cjkzsdndfjkasnkdnKcjlzS 
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>dawiodjawodjawdiasjojz hvjzxnc zms, n,aSN cjkzsdndfjkasnkdnKcjlzS </p>
+            ]]>
+        </content>
+    </entry>
+</feed>

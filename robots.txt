@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://sharenjun.githun.io/sitemap.xml
