@@ -12,15 +12,15 @@
         {
             "id": "https://sharenjun.github.io/test.html",
             "url": "https://sharenjun.github.io/test.html",
-            "title": "TEST",
-            "content_html": "<pre><code>datacode\n</code></pre>\n",
+            "title": "2024.6.13日记",
+            "content_html": "<p>马上就要开始CISCN国赛了，纯旅旅游了。记录记录。最近也把CTFSHOW的特性、文件上传、sql注入做了一下还是有许多收获的。</p>",
             "author": {
                 "name": "d1omg"
             },
             "tags": [
             ],
             "date_published": "2024-06-13T15:30:56+08:00",
-            "date_modified": "2024-06-13T21:56:49+08:00"
+            "date_modified": "2024-06-13T21:59:09+08:00"
         },
         {
             "id": "https://sharenjun.github.io/huan-ying-lmqnu-shi-lai-kan-wo-de-blog.html",

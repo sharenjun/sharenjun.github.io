@@ -3,14 +3,14 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-06-13T21:56:49+08:00</updated>
+    <updated>2024-06-13T21:59:09+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
     <id>https://sharenjun.github.io</id>
 
     <entry>
-        <title>TEST</title>
+        <title>2024.6.13日记</title>
         <author>
             <name>d1omg</name>
         </author>
@@ -21,9 +21,7 @@
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <pre><code>datacode
-</code></pre>
-
+                <p>马上就要开始CISCN国赛了，纯旅旅游了。记录记录。最近也把CTFSHOW的特性、文件上传、sql注入做了一下还是有许多收获的。</p>
             ]]>
         </content>
     </entry>
