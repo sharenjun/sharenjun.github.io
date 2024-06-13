@@ -3,7 +3,7 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-06-13T22:06:31+08:00</updated>
+    <updated>2024-06-13T22:08:43+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
@@ -22,8 +22,9 @@
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <p>#全场都上waf没得玩。web手纯坐牢
-#占个坑位,要得把源码审一下</p>
+                <h1 id="全场都上waf没得玩。web手纯坐牢">全场都上waf没得玩。web手纯坐牢</h1>
+<figure class="post__image"><img loading="lazy" src="https://sharenjun.github.io/media/posts/5/Snipaste_2024-05-25_12-39-40-2.jpg" alt="Image description" width="1405" height="708"  sizes="100vw" srcset="https://sharenjun.github.io/media/posts/5/responsive/Snipaste_2024-05-25_12-39-40-2-xs.jpg 300w ,https://sharenjun.github.io/media/posts/5/responsive/Snipaste_2024-05-25_12-39-40-2-sm.jpg 480w ,https://sharenjun.github.io/media/posts/5/responsive/Snipaste_2024-05-25_12-39-40-2-md.jpg 768w ,https://sharenjun.github.io/media/posts/5/responsive/Snipaste_2024-05-25_12-39-40-2-lg.jpg 1024w ,https://sharenjun.github.io/media/posts/5/responsive/Snipaste_2024-05-25_12-39-40-2-xl.jpg 1360w ,https://sharenjun.github.io/media/posts/5/responsive/Snipaste_2024-05-25_12-39-40-2-2xl.jpg 1600w"></figure><h1 id="占个坑位要得把源码审一下">占个坑位,要得把源码审一下</h1>
+
             ]]>
         </content>
     </entry>
