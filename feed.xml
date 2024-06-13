@@ -3,12 +3,30 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-06-13T14:32:11+08:00</updated>
+    <updated>2024-06-13T21:56:49+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
     <id>https://sharenjun.github.io</id>
 
+    <entry>
+        <title>TEST</title>
+        <author>
+            <name>d1omg</name>
+        </author>
+        <link href="https://sharenjun.github.io/test.html"/>
+        <id>https://sharenjun.github.io/test.html</id>
+
+        <updated>2024-06-13T15:30:56+08:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <pre><code>datacode
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>欢迎lmq女士来看我的blog</title>
         <author>
