@@ -3,12 +3,24 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-06-13T22:08:43+08:00</updated>
+    <updated>2024-06-28T00:23:50+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
     <id>https://sharenjun.github.io</id>
 
+    <entry>
+        <title>CISCN2024-华东南分区赛区</title>
+        <author>
+            <name>d1omg</name>
+        </author>
+        <link href="https://sharenjun.github.io/ciscn2024-hua-dong-nan-fen-qu-sai-qu.html"/>
+        <id>https://sharenjun.github.io/ciscn2024-hua-dong-nan-fen-qu-sai-qu.html</id>
+
+        <updated>2024-06-28T00:23:50+08:00</updated>
+            <summary></summary>
+        <content></content>
+    </entry>
     <entry>
         <title>2024宁波赛线下赛AWD</title>
         <author>
