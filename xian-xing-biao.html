@@ -1,0 +1,1075 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>线性表 - d1omg blog</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://sharenjun.github.io/xian-xing-biao.html"><link rel="alternate" type="application/atom+xml" href="https://sharenjun.github.io/feed.xml"><link rel="alternate" type="application/json" href="https://sharenjun.github.io/feed.json"><meta property="og:title" content="线性表"><meta property="og:site_name" content="d1omg blog"><meta property="og:description" content=""><meta property="og:url" content="https://sharenjun.github.io/xian-xing-biao.html"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://sharenjun.github.io/media/website/burpsuite_113238.ico" type="image/x-icon"><link rel="stylesheet" href="https://sharenjun.github.io/assets/css/style.css?v=6fbb1e8931a5afe843374fd67c192c86"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://sharenjun.github.io/xian-xing-biao.html"},"headline":"线性表","datePublished":"2024-07-09T14:44","dateModified":"2024-07-09T14:44","description":"","author":{"@type":"Person","name":"d1omg","url":"https://sharenjun.github.io/authors/d1omg/"},"publisher":{"@type":"Organization","name":"d1omg"}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body><div class="site-container"><header class="top" id="js-header"><a class="logo" href="https://sharenjun.github.io/">d1omg blog</a><div class="search"><div class="search__overlay js-search-overlay"><div class="search__overlay-inner"><button class="search__close js-search-close" aria-label="Close">Close</button></div></div><button class="search__btn js-search-btn" aria-label="Search"><svg role="presentation" focusable="false"><use xlink:href="https://sharenjun.github.io/assets/svg/svg-map.svg#search"/></svg></button></div></header><main><article class="post"><div class="hero"><figure class="hero__image hero__image--overlay"><img src="https://sharenjun.github.io/media/website/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440.png" srcset="https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-xs.png 300w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-sm.png 480w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-md.png 768w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-lg.png 1024w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-xl.png 1360w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-2xl.png 1600w" sizes="100vw" loading="eager" alt=""></figure><header class="hero__content"><div class="wrapper"><div class="post__meta"><time datetime="2024-07-09T14:44">July 9, 2024</time></div><h1>线性表</h1><div class="post__meta post__meta--author"><a href="https://sharenjun.github.io/authors/d1omg/" class="feed__author">d1omg</a></div></div></header></div><div class="wrapper post__entry"><h1 id="逻辑结构">逻辑结构</h1><p>数据元素之间的逻辑关系(抽象)</p><h2 id="集合结构">集合结构</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240705171712254.png" alt="image-20240705171712254" data-is-external-image="true"></figure><h2 id="线性结构">线性结构</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240705171716609.png" alt="image-20240705171716609" data-is-external-image="true"></figure><p>一对一的关系</p><p>假如说,2的前面是1,那么就把1称为2的<code>前驱</code></p><p>3在2的后面,那么把3称为<code>后继</code></p><h2 id="树型结构">树型结构</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240705172035523.png" alt="image-20240705172035523" data-is-external-image="true"></figure><p>只能有一个父系</p><p>子系可以有多个</p><h2 id="图形结构">图形结构</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240705172042422.png" alt="image-20240705172042422" data-is-external-image="true"></figure><h1 id="存储结构">存储结构</h1><p>数据结构在计算机中的表示(具体)</p><h2 id="顺序、链式、索引、散列">顺序、链式、索引、散列</h2><p>索引、散列可以由顺序、链式实现。</p><h2 id="顺序存储">顺序存储</h2><p>随机访问的意思是:可以到任意某一个元素(计算的时间是一样的)</p><figure class="post__image"><img loading="lazy" src="./img/image-20240705172801888.png" alt="image-20240705172801888" data-is-external-image="true"></figure><h2 id="链式存储">链式存储</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240705222056082.png" alt="image-20240705222056082" data-is-external-image="true"></figure><p>如果C后面没有了就变成NULL</p><h1 id="逻辑结构和存储结构">逻辑结构和存储结构</h1><figure class="post__image"><img loading="lazy" src="./img/image-20240705222145566.png" alt="image-20240705222145566" data-is-external-image="true"></figure><h1 id="顺序存储和链式存储优势劣势">顺序存储和链式存储优势劣势</h1><h2 id="顺序存储优势">顺序存储优势:</h2><ol><li>实现随机存取</li><li>每个元素占用最少的空间(假如你是int的数组,那么每个就占用4个字节)</li></ol><h2 id="顺序存储劣势">顺序存储劣势:</h2><p>只能使用整块的存储单元,会产出较多的碎片.</p><h2 id="链式存储优势">链式存储优势:</h2><p>充分利用所有存储单元,不会出现碎片现象</p><h2 id="链式存储劣势">链式存储劣势:</h2><ol><li>需要额外的</li></ol><h1 id="算法定义">算法定义</h1><p>1.有穷-执行一个算法能结束</p><p>2.确定-可以确定结果</p><p>3.可行-可以执行</p><p>4.输入-输入的内容</p><p>5.输出-加工输入的内容</p><h1 id="时间复杂度">时间复杂度</h1><p>时间复杂度指的是算法中所有语句的频度(执行次数)之和</p><p>记为<code>T(n)=O(f(n))</code></p><p>其中n是问题的规模;f(n)是问题规模n的某个函数</p><p>假如 输入n个数要排序. 排序算法就要执行n*n那么f(n)=n^2</p><p>O(n^2)</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706131151089.png" alt="image-20240706131151089" data-is-external-image="true"></figure><p>数组O(1) 可以拿到任何一个位置的数</p><h2 id="时间复杂度是怎么计算的">时间复杂度是怎么计算的?</h2><h3 id="eg1">eg.1</h3><pre><code class="language-c">int sum=0;
+sum=n*(n+1)/2;
+printf(&quot;%d&quot;,sum);
+</code></pre><p>因为这里没有for循环. 并且 程序执行了三次. 算法的执行次数等于3</p><p>时间复杂度为T(n)=O(1);</p><p>表示不会随着n的增长而增长</p><h3 id="eg2">eg.2</h3><pre><code class="language-c">int x=2;
+while(x&lt;n/2)
+    x=2*x;
+</code></pre><p>执行频率最高的就是x=2*x;</p><p>初始x=2,下一次4,8,16,32</p><p>2^t+1&lt;n/2</p><p>那就同取log,根据时间复杂度计算忽略高阶项系数和低阶项.</p><p>时间复杂度T(n)=O(</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706133110552.png" alt="image-20240706133110552" data-is-external-image="true"></figure>)<p></p><h3 id="eg3">eg.3</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240706133228346.png" alt="image-20240706133228346" data-is-external-image="true"></figure><p>最终是n-1 根据时间复杂度计算忽略高阶项系数和低阶项.</p><p>T(n)=O(n);</p><h3 id="eg4">eg.4</h3><figure class="post__image"><img src="./img/image-20240706133409130.png" alt="image-20240706133409130" data-is-external-image="true"></figure><p>首先外层循环,<code>for(i=0;i&lt;n;i++){}</code>根据n是执行了n次</p><p>内层循环while(x&lt;n/2) x=2*x;</p><p>1 2 4 8 16 32</p><p>2^n+1&lt;n/2</p><p>取log 为</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706133737631.png" alt="image-20240706133737631" data-is-external-image="true"></figure><p></p><p>再*外层的n就变为了</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706133754010.png" alt="image-20240706133754010" data-is-external-image="true"></figure><h3 id="eg5">eg.5</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240706133913715.png" alt="image-20240706133913715" data-is-external-image="true"></figure><p>外层循环是n，内层循环是m, n*m=&gt;n^2,根据时间复杂度乘法规则</p><p>O(n^2)</p><h3 id="eg6">eg.6</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240706134109260.png" alt="image-20240706134109260" data-is-external-image="true"></figure><p>这里是两个循环没有嵌套,那么就各自执行</p><p>T(n)=max(O(n),O(m));</p><p>取最大的</p><h3 id="eg7">eg.7</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240706134221555.png" alt="image-20240706134221555" data-is-external-image="true"></figure><p>取最大的,可以忽略5n并且可以忽略3.从而拿到时间复杂度</p><p>T(n)=O(n^3);</p><h1 id="空间复杂度">空间复杂度</h1><p>S(n)=O(f(n));</p><p>空间复杂度O(1)</p><p>n个元素数组排序,不开辟额外的空间(随着n的增长而增长的空间叫做额外空间).<code>[有点抽象,没理解]</code></p><p>空间复杂度就是O(1);</p><h1 id="线性表">线性表</h1><h2 id="顺序表">顺序表</h2><h3 id="什么是线性表">什么是线性表</h3><p>由n个相同类型的元素组成的有序集合.</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706140722646.png" alt="image-20240706140722646" data-is-external-image="true"></figure><p>线性表中元素个数n,称为线性表的长度. 当n=0时,为空表.</p><p>ai-1为ai的直接前驱</p><p>ai+1为ai的直接后继</p><h3 id="特点">特点</h3><ol><li>表中元素个数是有限的</li><li>表中元素的数据类型都相同,意味着每一个元素占用相同大小的空间</li><li>表中元素具有逻辑上的顺序性,在序列中各元素排序由其先后顺序</li></ol><h3 id="顺序表的代码定义">顺序表的代码定义</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240706141831375.png" alt="image-20240706141831375" data-is-external-image="true"></figure><h3 id="优点和缺点">优点和缺点</h3><figure class="post__image"><img src="./img/image-20240706142016698.png" alt="image-20240706142016698" data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./img/image-20240706142210019.png" alt="image-20240706142210019" data-is-external-image="true"></figure><p>最好的插入情况:在表尾插入,时间复杂度为O(1);</p><p>最坏的插入情况:在表头插入,时间复杂度为O(n);</p><p>平均情况:在插入概率平均的情况下,平均移动元素的次数为n/2,时间复杂度就为O(n);( 根据省略高次项系数。)</p><h3 id="insert-code">insert code</h3><p>首先在写代码之前要构建思想。</p><ol><li>判断是否超出数组位置</li><li>寻找要插入的位置</li><li>找到以后,位移后面的元素.</li><li>插入</li><li>结束,长度+1</li></ol><pre><code class="language-c++">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define MaxSize 50
+typedef struct
+{
+    int data[MaxSize];
+    int len;
+}sqllist;
+
+
+bool insert(sqllist *A,int element,int index)
+{
+
+    if(index&lt;1||index&gt;A-&gt;len+1) return 0;//插入位置是否合法
+
+    if(A-&gt;len&gt;=MaxSize) return 0;//插入的空间是否足够
+
+    for(int i=A-&gt;len;i&gt;=index;i--)//index就是要插入的第几个位置
+    {
+        A-&gt;data[i]=A-&gt;data[i-1];//往后移动
+        //假设i=5,进入这里之后就是A[5]=A[4],也就是A的第四个位置的元素，到第五个去了
+    }
+    A-&gt;data[index-1]=element;//全部移动完了之后,再插入对应元素的位置
+    A-&gt;len++;//线性表长度加1
+    return 1;
+}
+
+int main()
+{
+
+    sqllist B={{1,2,3,4,5},5};
+    if(insert(&amp;B,333,5))
+    {
+        printf(&quot;success\n&quot;);
+    }else
+    {
+        printf(&quot;fail\n&quot;);
+    }
+
+    for (int i =0;i&lt;B.len;i++)
+    {
+        printf(&quot;%d,&quot;,B.data[i]);
+    }
+    return 0;
+}
+</code></pre><h3 id="delete-code">delete code</h3><ol><li>判断是否超出、插入是否合法.</li><li>找到要删除的数</li><li>把后面的数字往前移</li><li>删除要删除的数</li><li>长度减对应数</li><li>结束</li></ol><pre><code class="language-c++">bool del(sqllist *A,int index){
+    if(index&lt;1||index&gt;A-&gt;len+1) return 0;//插入位置是否合法
+    if(A-&gt;len&gt;=MaxSize) return 0;//插入的空间是否足够
+    int temp=A-&gt;data[index-1];
+
+    for(int i=index;i&lt;A-&gt;len;i++)
+    {
+        A-&gt;data[i-1]=A-&gt;data[i];
+    }
+
+    A-&gt;len--;
+    return 1;
+}
+</code></pre><pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+#define MaxSize 50
+typedef int ElemType;//昂顺序表存储其他类型元素时,可以快速修改
+typedef struct
+{
+    ElemType data[MaxSize];
+    int len;
+}sqllist;
+
+
+bool insert(sqllist *A,int element,int index)
+{
+
+    if(index&lt;1||index&gt;A-&gt;len+1) return 0;//插入位置是否合法
+
+    for(int i=A-&gt;len;i&gt;=index;i--)//index就是要插入的第几个位置
+    {
+        A-&gt;data[i]=A-&gt;data[i-1];//往后移动
+        //假设i=5,进入这里之后就是A[5]=A[4],也就是A的第四个位置的元素，到第五个去了
+    }
+    A-&gt;data[index-1]=element;//全部移动完了之后,再插入对应元素的位置
+    A-&gt;len++;//线性表长度加1
+    return 1;
+}
+
+bool del(sqllist *A,int index){
+    if(index&lt;1||index&gt;A-&gt;len+1) return 0;//插入位置是否合法
+    if(A-&gt;len&gt;=MaxSize) return 0;//插入的空间是否足够
+    int temp=A-&gt;data[index-1];
+
+    for(int i=index;i&lt;A-&gt;len;i++)
+    {
+        A-&gt;data[i-1]=A-&gt;data[i];
+    }
+
+    A-&gt;len--;
+    return 1;
+}
+int main()
+{
+
+    sqllist B={{1,2,3,4,5},5};
+    if(insert(&amp;B,333,5))
+    {
+        printf(&quot;success insert\n&quot;);
+    }else
+    {
+        printf(&quot;fail insert\n&quot;);
+    }
+
+    if(del(&amp;B,1))
+    {
+        printf(&quot;success del\n&quot;);
+    }else
+    {
+        printf(&quot;fail del\n&quot;);
+    }
+
+    for (int i =0;i&lt;B.len;i++)
+    {
+        printf(&quot;%d,&quot;,B.data[i]);
+    }
+    return 0;
+}
+</code></pre><pre><code class="language-c++">#include &lt;stdio.h&gt;
+
+#define MaxSize 50
+typedef int ElemType;
+
+typedef struct
+{
+    ElemType data[MaxSize];
+    int len;
+}SqList;
+
+bool insert(SqList &amp;A,int element,ElemType index)
+{
+    if(index&lt;1||index&gt;A.len) return 0;//插入是否合法
+    if(A.len&gt;=MaxSize) return 0;//满了，插入不了了
+
+    for(int i=A.len;i&gt;=index;i--)
+    {
+        A.data[i]=A.data[i-1];
+    }
+    A.data[index-1]=element;
+    A.len++;
+
+return 1;
+
+}
+bool del(SqList &amp;A,ElemType index)
+{
+    if(index&lt;1||index&gt;A.len) return 0;//插入是否合法
+
+    for(int i=index;i&lt;=A.len;i++)
+    {
+        A.data[i-1]=A.data[i];
+    }
+    A.len--;
+    return 1;
+}
+void print(SqList &amp;A)
+{
+    for(int i=0;i&lt;A.len;i++)
+    {
+        printf(&quot;%3d&quot;,A.data[i]);
+    }
+}
+int main()
+{
+    SqList A={{1,2,3,4,5,6},6};
+
+
+    if(insert(A,333,1))
+    {
+        printf(&quot;success insert\n&quot;);
+    }else
+    {
+        printf(&quot;fail insert\n&quot;);
+    };
+
+
+    print(A);
+    return 0;
+}
+</code></pre><h3 id="思考">思考</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240706152613093.png" alt="image-20240706152613093" data-is-external-image="true"></figure><p>属于</p><h1 id="完整的一套操作-顺序表">完整的一套操作-顺序表</h1><pre><code class="language-c">#include &lt;stdio.h&gt;
+
+#define MaxSize 50
+typedef int ElemType;
+
+typedef struct
+{
+    ElemType data[MaxSize];
+    int len;
+}SqList;
+
+bool insert(SqList &amp;A,int element,ElemType index)
+{
+    if(index&lt;1||index&gt;A.len) return 0;//插入是否合法
+    if(A.len&gt;=MaxSize) return 0;//满了，插入不了了
+
+    for(int i=A.len;i&gt;=index;i--)
+    {
+        A.data[i]=A.data[i-1];
+    }
+    A.data[index-1]=element;
+    A.len++;
+
+return 1;
+
+}
+bool del(SqList &amp;A,ElemType index)
+{
+    if(index&lt;1||index&gt;A.len) return 0;//插入是否合法
+
+    for(int i=index;i&lt;=A.len;i++)
+    {
+        A.data[i-1]=A.data[i];
+    }
+    A.len--;
+    return 1;
+}
+void print(SqList &amp;A)
+{
+    for(int i=0;i&lt;A.len;i++)
+    {
+        printf(&quot;%3d&quot;,A.data[i]);
+    }
+}
+//查找某个元素的位置
+int findelement(SqList &amp;A,ElemType e)
+{
+    for(int i=0;i&lt;=A.len;i++)
+    {
+        if(A.data[i]==e)
+        {
+            printf(&quot;you want find element in =%d\n&quot;,i+1);
+        }
+    }
+    return 0;
+}
+//查找某个index中存在那个元素
+int getelement(SqList &amp;A,int index)
+{
+    printf(&quot;you want find index in elemtne%d&quot;,A.data[index-1]);
+  return 0;
+}
+int main()
+{
+    SqList A={{1,2,3,4,5,6},6};
+
+
+    if(insert(A,333,1))
+    {
+        printf(&quot;success insert\n&quot;);
+    }else
+    {
+        printf(&quot;fail insert\n&quot;);
+    };
+
+    if(del(A,3))
+    {
+        printf(&quot;success del\n&quot;);
+    }else
+    {
+        printf(&quot;fail del\n&quot;);
+
+    }
+
+    print(A);
+
+
+findelement(A,4);
+getelement(A,1);
+    return 0;
+}
+</code></pre><h1 id="oj作业-课时10作业">OJ作业-课时10作业</h1><p>AC代码:</p><pre><code class="language-c++">#include &lt;stdio.h&gt;
+#include &lt;iostream&gt;
+#define Max 100
+typedef  int E;
+
+typedef struct
+{
+    E data[Max];
+    int len;
+}SqList;
+
+bool insert(SqList &amp;I,E element,int index)
+{
+    if(index&lt;1||index&gt;I.len+1) return false;
+    if(I.len&gt;=Max) return false;
+    for(int i=I.len;index&lt;=i;i--)
+    {
+        I.data[i]=I.data[i-1];
+    }
+
+    I.data[index-1]=element;
+    I.len++;
+
+    return true;
+}
+
+bool del(SqList &amp;I,E index)
+{
+    if(index&lt;1||index&gt;I.len) return false;
+for(int i=index;i&lt;=I.len;i++)
+{
+    I.data[i-1]=I.data[i];
+}
+    I.len--;
+    return true;
+
+}
+
+
+void printList(SqList &amp;I)
+{
+    for(int i =0;i&lt;I.len;i++)//这里不能是等于,等于的话就会存在数组越界
+    {
+        printf(&quot;%3d&quot;,I.data[i]);
+    }
+printf(&quot;\n&quot;);
+}
+
+
+int main()
+{
+    SqList A={{1,2,3},3};
+    int element,pos;
+    scanf(&quot;%d&quot;,&amp;element);
+
+    if(insert(A,element,2))
+    {
+        printList(A);
+    }else
+    {
+        printf(&quot;false\n&quot;);
+    };
+
+    scanf(&quot;%d&quot;,&amp;pos);
+    if(del(A,pos))
+    {
+        printList(A);
+    }else
+    {
+        printf(&quot;false\n&quot;);
+    };
+    return 0;
+}
+</code></pre><h1 id="线性表的链式存储">线性表的链式存储</h1><p>因为顺序表在</p><ol><li>插入和删除操作移动大量元素.</li><li>数组的大小不好确定</li><li>占用一大段连续的存储空间,造成很多碎片</li></ol><p>我们用某种线性表需要再特定的场景下使用。</p><p>假如说你要读取很多数据的,就可以考虑使用顺序表。</p><h2 id="单链表">单链表</h2><p>​ [data]+[next]</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706165419894.png" alt="image-20240706165419894" data-is-external-image="true"></figure><p>在定义的时候，和顺序表不大一样。</p><p>因为在定义结构体的时候,会用到结构体指针。</p><p>当我们存储数据的时候,就是需要用到,这么一个结构体来保存数据.</p><pre><code class="language-c++">typedef int ElemType;
+typedef struct Lnode
+{
+    ElemType data;//数据域
+    struct Lnode *next;//指针域指向下一个数据
+}Lnode,*LinkList;
+</code></pre><p>每一个节点都有next指针. 当出现NULL的时候,就知道到结尾了.</p><figure class="post__image"><img src="./img/image-20240706170411086.png" alt="image-20240706170411086" data-is-external-image="true"></figure><p>在a1之前还放了一个,叫做头节点(不放值).L叫做头指针</p><figure class="post__image"><img loading="lazy" src="./img/image-20240706170506079.png" alt="image-20240706170506079" data-is-external-image="true"></figure><p>为什么在a1前加一个头结点？因为带头结点的链表是操作简单的。</p><p>若链表有头节点,则头指针永远指向头节点,不论链表是否为空(a1/a2/a3都是没有数据的),头指针均不为空,头指针是链表的必须元素,他表示一个链表.</p><p>头节点是为了操作的方便而设立的,其数据域一般为空,或者存放链表的长度.有头结点后,对在第一节点前插入和删除第一节点的操作就统一了,不需要频繁重置头指针.但头节点不是必须的.</p><h2 id="优点">优点</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240706173759189.png" alt="image-20240706173759189" data-is-external-image="true"></figure><h2 id="缺点">缺点</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240706173804223.png" alt="image-20240706173804223" data-is-external-image="true"></figure><p>指针域不是存数据的。是存指针的。</p><h2 id="插入思路">插入思路</h2><h3 id="在表头插入时">在表头插入时:</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240707114132054.png" alt="image-20240707114132054" data-is-external-image="true"></figure><p>q-&gt;next=p-&gt;next;(指针域)</p><p>p-&gt;next=q(指针域指向q的数据域)</p><h3 id="在表中插入时">在表中插入时:</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240707114240909.png" alt="image-20240707114240909" data-is-external-image="true"></figure><p>q-&gt;next=p-&gt;next;</p><p>p-&gt;next=q;</p><h3 id="表尾插入时">表尾插入时</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240707114820609.png" alt="image-20240707114820609" data-is-external-image="true"></figure><p>p-&gt;next=q;(p的指针域指向q的数据域)</p><p>q-&gt;next=NULL;(q的指针域指向NULL)</p><h2 id="删除">删除</h2><h3 id="在表头表中表尾删除时">在表头/表中/表尾删除时:</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240707115331156.png" alt="image-20240707115331156" data-is-external-image="true"></figure><p>q=p-&gt;next;(拿到要删除的元素)</p><p>p-&gt;next=q-&gt;next;(p的指针域[表头L]指向q指向的指针域a2)</p><p>free(q);</p><h2 id="查找">查找</h2><h3 id="按index查找">按index查找</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240707120742473.png" alt="image-20240707120742473" data-is-external-image="true"></figure><h3 id="按元素查找">按元素查找</h3><figure class="post__image"><img loading="lazy" src="./img/image-20240707120759933.png" alt="image-20240707120759933" data-is-external-image="true"></figure><h2 id="代码实战">代码实战</h2><h3 id="头插法中间法">头插法+中间法</h3><h4 id="插入">插入</h4><p>开始-&gt;定义链表指针-&gt;申请空间-&gt;scanf读取第一个元素-&gt;while循环建立链表-&gt;print-&gt;结束</p><pre><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+typedef int E;
+
+// 头插法+中间插
+typedef struct Lnode {
+    E data;
+    struct Lnode *next; // 指向下一个节点
+} Lnode, *posLnode;
+
+bool insert(posLnode &amp;A) {
+    A = (posLnode)malloc(sizeof(Lnode)); // 申请头节点的空间
+    A-&gt;next = NULL;
+    E x; // 定义存放数据
+
+    // 先读取一次数据，初始化 x
+    scanf(&quot;%d&quot;, &amp;x);
+
+    while (x != 9999) {
+        Lnode *s = (posLnode)malloc(sizeof(Lnode));
+        s-&gt;data = x;
+        s-&gt;next = A-&gt;next; // 让新节点 s，指向原来那个节点
+        A-&gt;next = s;
+        scanf(&quot;%d&quot;, &amp;x); // 读取下一个数据
+    }
+
+    return true;
+}
+
+void print(posLnode A) {
+    A = A-&gt;next; // 跳过头节点
+    while (A != NULL) {
+        printf(&quot;%3d&quot;, A-&gt;data);
+        A = A-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+
+int main() {
+    posLnode A; // 链表头指针
+    insert(A);
+    print(A);
+    return 0;
+}
+</code></pre><h3 id="尾插法">尾插法</h3><p>开始-&gt;定义链表头指针L-&gt;头节点申请空间,定义尾指针r,指向头结点L-&gt;scanf读取第一个元素-&gt;开启while循环建链表-&gt;结束</p><figure class="post__image"><img loading="lazy" src="./img/image-20240707152605292.png" alt="image-20240707152605292" data-is-external-image="true"></figure><pre><code class="language-c++">#include &lt;iostream&gt;
+
+typedef int E;
+typedef struct Lnode
+{
+    E data;
+    struct Lnode *next;
+}Lnode,*p;
+
+void insert_tail(Lnode *&amp;L)
+{
+    //头指针
+    L=(p)malloc(sizeof(Lnode));//申请节点空间
+    L-&gt;next=NULL;
+    //尾指针指向L(始终指向链表尾部),存储a(1-n)的s
+    Lnode *r=L,*s;
+    //输入
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    //定义
+    while (x!=9999)
+    {
+        s=(p)malloc(sizeof(Lnode));//为新节点申请空间
+        s-&gt;data=x;
+        r-&gt;next=s;//新节点给尾节点的next指针
+        r=s;
+        scanf(&quot;%d&quot;,&amp;x);
+
+    }
+    r-&gt;next=NULL;
+}
+
+void print(p A) {
+    A = A-&gt;next; // 跳过头节点
+    while (A != NULL) {
+        printf(&quot;%3d&quot;, A-&gt;data);
+        A = A-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+int main()
+{
+    p L;
+    insert_tail(L);
+    print(L);
+    return 0;
+}
+</code></pre><h3 id="按值查找与按位置查找">按值查找与按位置查找</h3><h4 id="按值查找">按值查找</h4><p>开始-&gt;定义链表头指针-&gt;尾插法新建链表-&gt;查找某个位置的元素值,需要判断是否合法,L是从0开始的-&gt;遍历查找index对应的元素值-&gt;结束输出</p><pre><code>p GetElem(p A,int index)
+{
+    //A起头是0开始的.
+    int i = 0;
+    if(index&lt;1) return NULL;
+
+    while (i&lt;index)
+    {
+        A=A-&gt;next;//L指向第一个有数据的
+        i++;
+    }
+    return A;
+
+}
+</code></pre><h4 id="按位置查找">按位置查找</h4><pre><code>p LocateElem(p A,E element)
+{
+    while (A)
+    {
+        if(A-&gt;data==element)
+        {
+            return A;//如果找到对应的值就返回节点index
+        }
+        A=A-&gt;next;
+    }
+    return  NULL;
+}
+</code></pre><h4 id="小完整-差删除">小完整-差删除</h4><pre><code class="language-c++">#include &lt;iostream&gt;
+
+typedef int E;
+typedef struct Lnode
+{
+    E data;
+    struct Lnode *next;
+}Lnode,*p;
+
+void insert_tail(Lnode *&amp;L)
+{
+    //头指针
+    L=(p)malloc(sizeof(Lnode));//申请节点空间
+    L-&gt;next=NULL;
+    //尾指针指向L(始终指向链表尾部),存储a(1-n)的s
+    Lnode *r=L,*s;
+    //输入
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    //定义
+    while (x!=9999)
+    {
+        s=(p)malloc(sizeof(Lnode));//为新节点申请空间
+        s-&gt;data=x;
+        r-&gt;next=s;//新节点给尾节点的next指针
+        r=s;
+        scanf(&quot;%d&quot;,&amp;x);
+
+    }
+    r-&gt;next=NULL;
+}
+void insert_head(Lnode *&amp;L)
+{
+    //首先给L开辟一个空间,用来存放头指针
+    L=(p)malloc(sizeof(Lnode));//申请节点空间
+    L-&gt;next=NULL;
+    //输入数据
+    Lnode *s;//定义存放数据的 数据指针/数据域
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    while (x!=9999)
+    {
+        //给s开辟一条存放数据的空间
+        s=(p)malloc(sizeof(Lnode));
+        s-&gt;data=x;
+        s-&gt;next=L-&gt;next;
+        L-&gt;next=s;
+        scanf(&quot;%d&quot;,&amp;x);
+    }
+}
+void print(p A) {
+    A = A-&gt;next; // 跳过头节点
+    while (A != NULL) {
+        printf(&quot;%3d&quot;, A-&gt;data);
+        A = A-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+
+p GetElem(p A,int index)
+{
+    //A起头是0开始的.
+    int i = 0;
+    if(index&lt;1) return NULL;
+
+    while (i&lt;index)
+    {
+        A=A-&gt;next;//L指向第一个有数据的
+        i++;
+    }
+    return A;
+
+}
+
+p LocateElem(p A,E element)
+{
+    while (A)
+    {
+        if(A-&gt;data==element)
+        {
+            return A;//如果找到对应的值就返回节点index
+        }
+        A=A-&gt;next;
+    }
+    return  NULL;
+}
+
+int main()
+{
+    p L,GetE,LocE;
+    // insert_tail(L);
+    insert_head(L);
+    print(L);
+    GetE=GetElem(L,2);
+    if(GetE)
+    {
+        printf(&quot;success getelem\n&quot;);
+        printf(&quot;%d\n&quot;,GetE-&gt;data);
+    }else
+    {
+        printf(&quot;faild getelem\n&quot;);
+    };
+
+    LocE=LocateElem(L,7);
+    if(LocE)
+    {
+        printf(&quot;success LocE\n&quot;);
+        printf(&quot;%d\n&quot;,LocE-&gt;data);
+    }else
+    {
+        printf(&quot;faild LocE\n&quot;);
+    };
+    
+    return 0;
+}
+</code></pre><h3 id="往第i个位置插入元素">往第i个位置插入元素</h3><pre><code class="language-c">bool insert_i_pos(Lnode  *&amp;A,int index,E element)
+{
+    p AAA = GetElem(A, index - 1);
+    if (AAA == NULL) return false;
+    p q = (p)malloc(sizeof(Lnode)); //给新节点申请空间
+    q-&gt;data = element;
+    q-&gt;next = AAA-&gt;next;
+    AAA-&gt;next = q;
+    return true;
+}
+</code></pre><h1 id="单链表完整代码">单链表完整代码:</h1><pre><code class="language-c++">#include &lt;iostream&gt;
+
+typedef int E;
+typedef struct Lnode
+{
+    E data;
+    struct Lnode *next;
+}Lnode,*p;
+
+
+void insert_tail(Lnode *&amp;L)
+{
+    //头指针
+    L=(p)malloc(sizeof(Lnode));//申请节点空间
+    L-&gt;next=NULL;
+    //尾指针指向L(始终指向链表尾部),存储a(1-n)的s
+    Lnode *r=L,*s;
+    //输入
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    //定义
+    while (x!=9999)
+    {
+        s=(p)malloc(sizeof(Lnode));//为新节点申请空间
+        s-&gt;data=x;
+        r-&gt;next=s;//新节点给尾节点的next指针
+        r=s;
+        scanf(&quot;%d&quot;,&amp;x);
+
+    }
+    r-&gt;next=NULL;
+}
+void insert_head(Lnode *&amp;L)
+{
+    //首先给L开辟一个空间,用来存放头指针
+    L=(p)malloc(sizeof(Lnode));//申请节点空间
+    L-&gt;next=NULL;
+    //输入数据
+    Lnode *s;//定义存放数据的 数据指针/数据域
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    while (x!=9999)
+    {
+        //给s开辟一条存放数据的空间
+        s=(p)malloc(sizeof(Lnode));
+        s-&gt;data=x;
+        s-&gt;next=L-&gt;next;
+        L-&gt;next=s;
+        scanf(&quot;%d&quot;,&amp;x);
+    }
+}
+
+
+void print(p A) {
+    A = A-&gt;next; // 跳过头节点
+    while (A != NULL) {
+        printf(&quot;%3d&quot;, A-&gt;data);
+        A = A-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+}
+
+p GetElem(p A,int index)
+{
+    //A起头是0开始的.
+    int i = 0;
+    if(index&lt;0) return NULL;
+    while (i&lt;index)
+    {
+        A=A-&gt;next;//L指向第一个有数据的
+        i++;
+    }
+    return A;
+
+}
+p LocateElem(p A,E element)
+{
+    while (A)
+    {
+        if(A-&gt;data==element)
+        {
+            return A;//如果找到对应的值就返回节点index
+        }
+        A=A-&gt;next;
+    }
+    return  NULL;
+}
+//index代表插入索引
+bool insert_i_pos(Lnode  *&amp;A,int index,E element)
+{
+    p AAA = GetElem(A, index - 1);
+    if (AAA == NULL) return false;
+    p q = (p)malloc(sizeof(Lnode)); //给新节点申请空间
+    q-&gt;data = element;
+    q-&gt;next = AAA-&gt;next;
+    AAA-&gt;next = q;
+    return true;
+}
+
+//要删除第几个元素
+bool del(Lnode *&amp;A,int index)
+{
+
+    p q;
+    p AAA=GetElem(A,index-1);//拿到要删除的元素前一个指针
+    if(AAA==NULL) return  false;
+    q=AAA-&gt;next;//拿到要删除的指针
+    if(q==NULL) return  false;//当链表只有5个节点,删除第6个节点时返回false
+    AAA-&gt;next=q-&gt;next;//断链
+    free(q);
+    return  true;
+}
+int main()
+{
+    p L,GetE,LocE;
+    // insert_tail(L);
+    insert_head(L);
+    print(L);
+    /*
+    GetE=GetElem(L,2);
+    if(GetE)
+    {
+        printf(&quot;success getelem\n&quot;);
+        printf(&quot;%d\n&quot;,GetE-&gt;data);
+    }else
+    {
+        printf(&quot;faild getelem\n&quot;);
+    };
+
+    LocE=LocateElem(L,7);
+    if(LocE)
+    {
+        printf(&quot;success LocE\n&quot;);
+        printf(&quot;%d\n&quot;,LocE-&gt;data);
+    }else
+    {
+        printf(&quot;faild LocE\n&quot;);
+    };
+*/
+    insert_i_pos(L,2,99);
+    print(L);
+    del(L,3);
+    print(L);
+    return 0;
+}
+</code></pre><h1 id="oj作业-课时11作业">OJ作业-课时11作业</h1><figure class="post__image"><img src="./img/image-20240708123527112.png" alt="image-20240708123527112" data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./img/image-20240708123535934.png" alt="image-20240708123535934" data-is-external-image="true"></figure><pre><code class="language-c++">#include &lt;iostream&gt;
+typedef int E;
+typedef struct Lnode
+{
+    E data;
+    struct Lnode *next;
+
+}Lnode,*p;// struct Lnode *p;
+
+
+void insert_head(p &amp;L)
+{
+    //定义头指针L
+    L=(p)malloc(sizeof(Lnode));
+    L-&gt;next=NULL;
+    //定义存数据的节点
+    Lnode *s;
+    //定义输入数据的变量
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    while (x!=9999)
+    {
+        s=(p)malloc(sizeof(Lnode));
+        s-&gt;data=x;
+        s-&gt;next=L-&gt;next;
+        L-&gt;next=s;
+        scanf(&quot;%d&quot;,&amp;x);
+    }
+}//insert head
+void print_insert_head(p A)
+{
+    int i=0;
+    A=A-&gt;next;
+    while (A!=NULL)
+    {
+        printf(&quot;%3d&quot;,A-&gt;data);
+        ++i;
+        A=A-&gt;next;
+    }
+    printf(&quot;\n&quot;);
+};//my print way
+void insert_tail(p &amp;L)
+{
+    //初始化头
+    L=(p)malloc(sizeof(Lnode));
+    L-&gt;next=NULL;
+    //初始化数据域
+    p s,r=L;
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    while (x!=9999)
+    {
+        s=(p)malloc(sizeof(Lnode));
+        s-&gt;data=x;
+        r-&gt;next=s;//r的下一个就是s的数据域
+        r=s;//r直接变成了s,新的插入之后又是一个新的s
+        scanf(&quot;%d&quot;,&amp;x);
+    }
+    r-&gt;next=NULL;
+    //在尾插法中，没有正确地设置最后一个节点的 next 指针为 NULL。导致在打印链表时，链表的最后一个节点的 next 指针不是 NULL，可能指向了一些未初始化的内存区域，从而导致无限循环。
+}
+void PrintList(p L)
+{
+    L = L-&gt;next;
+    while (L != NULL)
+    {
+        printf(&quot;%d&quot;, L-&gt;data); //打印当前结点数据
+        L = L-&gt;next; //指向下一个结点
+        if (L != NULL)
+        {
+            printf(&quot; &quot;);
+        }
+    }
+    printf(&quot;\n&quot;);
+}//oj print way
+//根据index找元素
+p GetEle(p L,int index)
+{
+    int i=0;
+    if(index&lt;0) return NULL;
+    while (i&lt;index)
+    {
+        L=L-&gt;next;
+        i++;
+    }
+    return L;
+}
+//根据元素找index
+p FindEle(p L,E element)
+{
+    while (L)
+    {
+        if(L-&gt;data==element)
+        {
+            return L;
+        }
+        L=L-&gt;next;
+    }
+    return NULL;//如果没有找到就返回NULL;
+}
+bool del(p L,int index)
+{
+    p A;//定义找到删除前一个
+    p d;//定义要删除的元素
+    A=GetEle(L,index-1);//找到要删除的元素的前一个
+    if (A==NULL) return false;
+    d=A-&gt;next;
+    if(d==NULL) return false;
+    A-&gt;next=d-&gt;next;//断链
+    free(d);
+    return true;
+}
+int main()
+{
+
+     p A,GetE,FindE;
+    // insert_head(A);
+    // PrintList(A);
+    insert_tail(A);
+    PrintList(A);
+
+    GetE=GetEle(A,2);
+    if(GetE){printf(&quot;success find e:%d\n&quot;,GetE-&gt;data);}else{printf(&quot;fail find e&quot;);};
+    FindE=FindEle(A,7);
+    if(FindE){printf(&quot;success find i:%d\n&quot;,FindE-&gt;data);}else{printf(&quot;fail find i&quot;);};
+
+    del(A,3);
+    PrintList(A);
+    return 0;
+}
+</code></pre><h1 id="2019年考研真题分析41题-很懵">2019年考研真题分析41题-很懵</h1><figure class="post__image"><img loading="lazy" src="./img/image-20240708123614467.png" alt="image-20240708123614467" data-is-external-image="true"></figure><h2 id="问题">问题:</h2><h3 id="空间复杂度在什么情况下不是o1">空间复杂度在什么情况下不是O(1)?</h3><p>比如你在原有基础[]n个元素中,又让其中某一个元素开辟了n个空间，就不是空间复杂度为O(1)的了。</p><h3 id="设计思想">设计思想:</h3><p>空间复杂度为O(1),不能额外申请空间.</p><p>找到链表中间节点.</p><p>前一半节点为L,后半部分节点为L2.将链表后半部分的创立一个新节点给予L2,再进行原地逆置.</p><p>最后交叉合并.</p><figure class="post__image"><img loading="lazy" src="./img/image-20240708151645495.png" alt="image-20240708151645495" data-is-external-image="true"></figure><h3 id="解题设计">解题设计</h3><ol><li>找到中间节点,并赋予新节点为L2.</li><li>原地逆置L2</li><li>合并</li></ol><h3 id="代码">代码</h3><pre><code class="language-c++">//找中间
+void find_middle(p L,p &amp;L2)
+{
+    //第二条链表的头节点
+    L2=(p)malloc(sizeof(NODE));
+    //构造两个指针,双指针法遍历
+    p pcur,ppre;
+    //开始遍历
+    pcur=ppre=L-&gt;next;//首先指到a1
+    while (pcur!=NULL)
+    {
+        pcur=pcur-&gt;next;//先走一步，判断后面是否为空
+        if(pcur==NULL) break;//判断pcur后面是否为空了
+        pcur=pcur-&gt;next;//在走一部
+        if(pcur==NULL) break;//为了使得偶数个ppre依然指向中间两个节点的前一个
+        ppre=ppre-&gt;next;
+    }
+
+    //这里没怎么理解,还得画个图
+    L2-&gt;next=ppre-&gt;next;//由L2头节点指向后面一半链表
+    ppre-&gt;next=NULL;//前一半链表的最后一个节点,next要为null
+}
+//逆置
+//逆转不需要头指针变的
+void reverse(p L2)
+{
+    p r,s,t;
+    r=L2-&gt;next;
+    if(r==NULL) return;//链表为空,第一个节点a1没数据
+    s=r-&gt;next;
+    if(s==NULL) return;
+    t=s-&gt;next;
+    while (t)
+    {
+        s-&gt;next=r;
+        r=s;//以下三句是三个指针同时向后
+        s=t;
+        t=t-&gt;next;
+    }
+
+//这里也不大懂,可以画图
+s-&gt;next=r;//最后一步了。
+L2-&gt;next-&gt;next=NULL;//逆置后的链表尾部next要为空 L2原本第一个节点要为NULL
+L2-&gt;next=s;
+
+}
+//合并L，L2
+void merge(p L,p L2)
+{
+    p pcur,pp,qq;
+    pcur=L-&gt;next;
+    pp=pcur-&gt;next;
+    qq=L2-&gt;next;
+    while (qq!=NULL&amp;&amp;pp!=NULL)
+    {
+        pcur-&gt;next=qq;
+        qq=qq-&gt;next;//指向下一个节点 用来遍历l2链表
+        pcur=pcur-&gt;next;
+
+        pcur-&gt;next=pp;
+        pp=pp-&gt;next;
+        pcur=pcur-&gt;next;
+    }
+    if(pp!=NULL){pcur-&gt;next=pp;}
+    if(qq!=NULL){pcur-&gt;next=qq;}
+}
+</code></pre><h3 id="分析时间复杂度">分析时间复杂度</h3><p><code>void find_middle</code></p><figure class="post__image"><img loading="lazy" src="./img/image-20240708172201809.png" alt="image-20240708172201809" data-is-external-image="true"></figure><p>因为pcur总共走两次,所以是O(n/2)=O(n)</p><p><code>void reverse</code></p><p>因为他遍历的就是L2的长度,所以时间复杂度就是O(n)</p><p><code>void merge</code></p><p>遍历次数O(n/2)=O(n)</p><p>三个函数 实际遍历之后就是1.5n -&gt; O(n)</p><h1 id="双链表">双链表</h1><p><a href="https://blog.csdn.net/weixin_44162361/article/details/115819742">https://blog.csdn.net/weixin_44162361/article/details/115819742</a> 参考博客</p><h2 id="插入-1">插入</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240709111313438.png" alt="image-20240709111313438" data-is-external-image="true"></figure><h2 id="尾插">尾插</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240709130845988.png" alt="image-20240709130845988" data-is-external-image="true"></figure><pre><code class="language-c++">bool insert_tail(k &amp;p)
+{
+    init(p);
+    //定义
+    k s,tail=p;//尾插法.和单链表差不多
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    while (x!=9999)
+    {
+        s=(k)malloc(sizeof(Lnode));
+        if(s==NULL) return false;
+        s-&gt;data=x;//给予数据
+        s-&gt;next=NULL;//
+        s-&gt;prev=tail;
+        tail-&gt;next=s;
+        tail=s;
+        scanf(&quot;%d&quot;,&amp;x);
+    };
+    return  true;
+}
+</code></pre><h2 id="头插">头插</h2><figure class="post__image"><img loading="lazy" src="./img/image-20240709135836015.png" alt="image-20240709135836015" data-is-external-image="true"></figure><pre><code class="language-c++">bool insert_head(k &amp;p)
+{
+    //初始化
+    init(p);
+    k s;
+    E x;
+    scanf(&quot;%d&quot;,&amp;x);
+    while (x!=9999)
+    {
+        s=(k)malloc(sizeof(Lnode));
+        if(s==NULL) return false;
+        s-&gt;data=x;
+        if(p-&gt;next==NULL)
+        {
+            s-&gt;next=NULL;
+            s-&gt;prev=p;
+            p-&gt;next=s;
+        }else
+        {
+           s-&gt;next=p-&gt;next;
+           p-&gt;next-&gt;prev=s;
+            s-&gt;prev=p;
+            p-&gt;next=s;
+        }
+        scanf(&quot;%d&quot;,&amp;x);
+    };
+    return  true;
+}
+</code></pre><h2 id="删除-1">删除</h2><pre><code class="language-c++">k GetEle(k p,int index)
+{
+    p=p-&gt;next;
+    int i = 1;
+    if(index&lt;1) return NULL;
+    while (p&amp;&amp;i&lt;index)
+    {
+        p=p-&gt;next;
+        i++;
+    }
+    return p;
+}
+</code></pre><pre><code class="language-c++">bool delete_pos(k &amp;p,int index)
+{
+    if(index&lt;1||len(p)&lt;index) return false;
+    k q;//要删除的元素
+    p=GetEle(p,index-1);//拿到前驱节点
+    if(p==NULL) return false;
+    q=p-&gt;next;//要删除的元素
+    p-&gt;next=q-&gt;next;//q的下一个指向上一个元素
+    q-&gt;next-&gt;prev=p;//要删除元素的下一个元素的前驱节点被p赋予
+    free(q);
+    return true;
+}
+</code></pre><h2 id="求表的长度">求表的长度</h2><pre><code class="language-c++">int len(k p)
+{
+    p=p-&gt;next;
+    int i = 0;
+    while(p)
+    {
+        p=p-&gt;next;
+        i++;
+    }
+    return i;
+}
+</code></pre><h1 id="循环-单、双链表">循环 单、双链表</h1><pre><code class="language-c++">//循环单-插入
+
+//循环双-插入
+bool insert_tail(k &amp;p)
+{
+    init(p);
+    //定义
+    k s, tail = p; // 尾插法，和单链表差不多
+    E x;
+    scanf(&quot;%d&quot;, &amp;x);
+    while (x != 9999)
+    {
+        s = (k)malloc(sizeof(Lnode));
+        if (s == NULL) return false;
+        s-&gt;data = x; // 赋予数据
+
+        if (tail == p) { // 如果链表为空（插入第一个节点）
+            s-&gt;next = p;
+            s-&gt;prev = p;
+            p-&gt;next = s;
+            p-&gt;prev = s;
+        } else { // 插入后续节点
+            s-&gt;next = p;
+            s-&gt;prev = tail;
+            tail-&gt;next = s;
+            p-&gt;prev = s;
+        }
+
+        tail = s; // 更新尾节点
+        scanf(&quot;%d&quot;, &amp;x);
+    }
+    return true;
+}
+</code></pre></div><footer class="wrapper post__footer"><p class="post__last-updated">This article was updated on July 9, 2024</p><div class="post__share"></div><div class="post__bio bio"><div><h3 class="bio__name"><a href="https://sharenjun.github.io/authors/d1omg/" rel="author">d1omg</a></h3></div></div></footer></article><nav class="post__nav"><div class="post__nav-inner"><div class="post__nav-prev"><svg width="1.041em" height="0.416em" aria-hidden="true"><use xlink:href="https://sharenjun.github.io/assets/svg/svg-map.svg#arrow-prev"/></svg> <a href="https://sharenjun.github.io/cyu-yan-xue-xi.html" class="post__nav-link" rel="prev"><span>Previous</span> C语言基础</a></div></div></nav><div class="post__related related"><div class="wrapper"><h2 class="h5 related__title">You should also read:</h2><article class="related__item"><div class="feed__meta"><time datetime="2024-06-30T21:26" class="feed__date">June 30, 2024</time></div><h3 class="h1"><a href="https://sharenjun.github.io/cyu-yan-xue-xi.html">C语言基础</a></h3></article><article class="related__item"><div class="feed__meta"><time datetime="2024-06-28T00:23" class="feed__date">June 28, 2024</time></div><h3 class="h1"><a href="https://sharenjun.github.io/ciscn2024-hua-dong-nan-fen-qu-sai-qu.html">CISCN2024-华东南分区赛区</a></h3></article><article class="related__item"><div class="feed__meta"><time datetime="2024-06-13T22:06" class="feed__date">June 13, 2024</time></div><h3 class="h1"><a href="https://sharenjun.github.io/2024ning-bo-sai-xian-xia-sai-awd.html">2024宁波赛线下赛AWD</a></h3></article></div></div></main><footer class="footer"><div class="footer__copyright"><p>Powered by Publii</p></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="https://sharenjun.github.io/assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script defer="defer" src="https://sharenjun.github.io/assets/js/scripts.min.js?v=f47c11534595205f20935f0db2a62a85"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script></body></html>
