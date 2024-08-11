@@ -10,6 +10,19 @@
     },
     "items": [
         {
+            "id": "https://sharenjun.github.io/shu-qi-xue-xi.html",
+            "url": "https://sharenjun.github.io/shu-qi-xue-xi.html",
+            "title": "暑期学习",
+            "content_html": "<pre><code>本来想去护网的，结果投的简历之后也没啥消息。可能是因为只投了一家的原因吧。本以为会和去年一样,结果今年是常态化。吃了个大亏。\n当然了,暑假空闲的时间也没有闲下来.也是学习了408相关的内容,对于计算机有了更深层的了解.\n\n学习了408相关的内容之后,对于CTF、网络安全的一些漏洞有了更深刻的理解,平时一些抽象的、难懂的也能理解一些了。\n路漫漫其修远兮，吾将上下而求索.\n我一定要成为网络安全高手.\n</code></pre>\n<figure class=\"post__image\"><img loading=\"lazy\" src=\"https://sharenjun.github.io/media/posts/10/a.jpg\" alt=\"Image description\" width=\"796\" height=\"110\"  sizes=\"100vw\" srcset=\"https://sharenjun.github.io/media/posts/10/responsive/a-xs.jpg 300w ,https://sharenjun.github.io/media/posts/10/responsive/a-sm.jpg 480w ,https://sharenjun.github.io/media/posts/10/responsive/a-md.jpg 768w ,https://sharenjun.github.io/media/posts/10/responsive/a-lg.jpg 1024w ,https://sharenjun.github.io/media/posts/10/responsive/a-xl.jpg 1360w ,https://sharenjun.github.io/media/posts/10/responsive/a-2xl.jpg 1600w\"></figure>",
+            "author": {
+                "name": "d1omg"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-08-11T15:34:28+08:00",
+            "date_modified": "2024-08-11T15:39:23+08:00"
+        },
+        {
             "id": "https://sharenjun.github.io/xian-xing-biao.html",
             "url": "https://sharenjun.github.io/xian-xing-biao.html",
             "title": "线性表",
