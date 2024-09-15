@@ -3,7 +3,7 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-09-15T22:20:13+08:00</updated>
+    <updated>2024-09-15T22:39:59+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
@@ -110,6 +110,105 @@ int main()
 }
 </code></pre>
 <h1 id="选十佳">选十佳</h1>
+<pre><code class="language-c++17">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#define N 6 //选手编号
+#define M 3 //N项成绩
+
+//定义的结构体,结构体里面的变量
+typedef struct student
+{
+    int number;//学号之类的
+    char name[12];//姓名
+    float score[3];//3项成绩
+    float ave;// 平均值
+
+}Student;
+
+void average(Student s[],int i,int m)
+{
+    //s[]存储一整个数组数据.i对应结构体中的number.m对应结构体中的???
+    int j;//对应for循环中的j.
+    s[i].ave=0;
+    for(j=0;j&lt;m;j++)
+    {
+        //计算平均成绩
+        //s[i].c[j]对应输入的三项成绩
+        scanf(&quot;%f&quot;,&amp;s[i].score[j]);
+        s[i].ave=s[i].ave+s[i].score[j];
+        //要计算平均值应该是
+        // s[i].ave=s[i].ave/m;
+
+    }
+}
+
+void input(Student s[],int i,int m)
+{
+   int n;
+    for(n=0;n&lt;i;n++)
+    {
+        //首先调用scanf用来输入学号和姓名.
+        scanf(&quot;%d%s&quot;,&amp;s[n].number,&amp;s[n].name);
+        //后面再调用average函数来进行平均数的计算.在计算之前还会有scanf函数是用来
+        average(s,n,m);
+    };
+};
+
+void print(Student s[],int i)
+{
+    int n;
+    for(n=0;n&lt;i;n++)
+    {
+        //输出
+        printf(&quot;%-4d%20s%8.1f%8.1f%8.1f%6.1f\n&quot;, s[n].number, s[n].name, s[n].score[0], s[n].score[1], s[n].score[2], s[n].ave);
+        //%-4d的意思是左对齐并保留至少 4 个字符宽度。如果输出的数字不足 4 位，会在右侧补空格；如果超过 4 位，则不截断。
+        //%20s的意思是右对齐并保留至少 20 个字符宽度。如果字符串不足 20 个字符，会在左侧补空格；如果超过 20 个字符，则不会截断。
+        //%8.1f表示保留总宽度为 8 个字符，其中小数点后保留 1 位小数。右对齐，左侧补空格。
+        //%6.1f表示保留总宽度为 6 个字符，其中小数点后保留 1 位小鼠。右对齐，左侧补空格。
+    }
+};
+
+void sort(Student s[],int i)
+{
+    int n,m;
+    Student t;//构造这一个t结构体是因为要交换一整个的数据.
+    for(n=0;n&lt;i;n++)//第一层循环控制 前面一个数据
+    {
+        for(m=0;m&lt;i-n-1;m++)//第二层循环控制 后面一个数据.为什么要-1是因为是从0开始
+        {
+            if(s[m].ave&lt;s[m+1].ave){t=s[m];s[m]=s[m+1];s[m+1]=t;}//判断前面是否小于后面.条件满足则交换.
+        }
+    }
+};
+
+int main()
+{
+
+    Student s[N];
+
+    printf(&quot;请输入%d个选手的编号、姓名和%d项成绩:\n&quot;,N,M);
+    input(s,N,M);
+
+    printf(&quot;排序前的结果:\n&quot;);
+    print(s,N);
+    sort(s,N);
+
+    printf(&quot;排序后的结果:\n&quot;);
+    print(s,N);
+    printf(&quot;前三名结果:\n&quot;);
+    print(s,3);
+    getch();//调用&lt;conio.h&gt;文件头.作用是从stdio流中读字符，即从控制台读取一个字符，但不显示在屏幕上
+    return 1;
+}
+/*测试数据
+1 ln 98 97 98
+2 ym 95 97 98
+3 gjj 98 99 97
+4 zyn 95 97 93
+5 lx 94 95 96
+6 ld 92 93 95
+*/
+</code></pre>
 
             ]]>
         </content>
