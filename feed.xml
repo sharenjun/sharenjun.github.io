@@ -3,7 +3,7 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-09-15T22:39:59+08:00</updated>
+    <updated>2024-09-15T22:43:03+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
@@ -21,7 +21,8 @@
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <p>/<em>标准C++17</em>/</p><h1 id="指针的简单应用">指针的简单应用</h1>
+                <p>/<em>标准C++17</em>/</p><h1 id="预备知识">预备知识</h1>
+<h2 id="指针的简单应用">指针的简单应用</h2>
 <pre><code class="language-c++17">#include &lt;iostream&gt;
 #include &lt;stdio.h&gt;
 #include &lt;malloc.h&gt;
@@ -41,7 +42,7 @@ int main()
     return 0;
 }
 </code></pre>
-<h1 id="销售排行榜">销售排行榜</h1>
+<h2 id="销售排行榜">销售排行榜</h2>
 <pre><code class="language-c++17">dingyi.h
 #ifndef DINGYI_H
 #define DINGYI_H
@@ -109,7 +110,7 @@ int main()
     print(a,N);
 }
 </code></pre>
-<h1 id="选十佳">选十佳</h1>
+<h2 id="选十佳">选十佳</h2>
 <pre><code class="language-c++17">#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 #define N 6 //选手编号
@@ -209,6 +210,10 @@ int main()
 6 ld 92 93 95
 */
 </code></pre>
+<h1 id="顺序表">顺序表</h1>
+<h2 id="我的顺序表">我的顺序表</h2>
+<h2 id="我的电话本-顺序表的应用">我的电话本-顺序表的应用</h2>
+<h2 id="顺序表的应用-合并线性表">顺序表的应用-合并线性表</h2>
 
             ]]>
         </content>
