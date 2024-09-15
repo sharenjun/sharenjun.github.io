@@ -3,12 +3,117 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-08-11T15:39:23+08:00</updated>
+    <updated>2024-09-15T22:20:13+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
     <id>https://sharenjun.github.io</id>
 
+    <entry>
+        <title>数据结构实验教程</title>
+        <author>
+            <name>d1omg</name>
+        </author>
+        <link href="https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html"/>
+        <id>https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html</id>
+
+        <updated>2024-09-15T22:18:28+08:00</updated>
+            <summary></summary>
+        <content type="html">
+            <![CDATA[
+                <p>/<em>标准C++17</em>/</p><h1 id="指针的简单应用">指针的简单应用</h1>
+<pre><code class="language-c++17">#include &lt;iostream&gt;
+#include &lt;stdio.h&gt;
+#include &lt;malloc.h&gt;
+
+int main()
+{
+    int x;
+    int *q,*p;
+    //p default set scanf x value;
+    //q is default set for malloc;
+    x=10;
+    p=&amp;x;
+    q=(int *)malloc(100);
+    *q=100;
+    printf(&quot;*p=%d,*q=%d\n&quot;,*p,*q);
+    free(q);
+    return 0;
+}
+</code></pre>
+<h1 id="销售排行榜">销售排行榜</h1>
+<pre><code class="language-c++17">dingyi.h
+#ifndef DINGYI_H
+#define DINGYI_H
+#define N 8
+#endif //DINGYI_H
+</code></pre>
+<pre><code class="language-c++17">#include &lt;stdio.h&gt;
+#include &quot;dingyi.h&quot;
+
+void printXing(int n)
+{
+    for(int i=0;i&lt;N;i++)
+    {
+        printf(&quot;*****&quot;);
+    }
+    printf(&quot;\n&quot;);
+}
+void input(int a[],int n)
+{
+    printXing(10);
+    printf(&quot;请输入%d个人的销售量\n&quot;,n);
+    for(int i=0;i&lt;n;i++)
+    {
+        scanf(&quot;%d&quot;,&amp;a[i]);
+    }
+    printXing(10);
+}
+void print(int a[],int n)
+{
+    // printXing(10);
+    printf(&quot;%d个人的销售量排行榜如下:\n&quot;,n);
+    for(int i=0;i&lt;n;i++)
+    {
+        printf(&quot;%3d &quot;,a[i]);
+        // printf(&quot;\n&quot;);
+        // printXing(10);
+    }
+};
+
+void swap(int *x, int *y)
+{
+    int t;
+    t = *x;
+    *x = *y;
+    *y = t;
+}
+//sort的作用就是一个一个比较. 8 和 7. 8和6这样一个一个比.
+void sort(int a[],int n)
+{
+    for(int i=0;i&lt;N;i++)
+    {
+        for(int j=0;j&lt;N-1;j++)
+        {
+            if(a[j]&lt;a[j+1]){swap(&amp;a[j],&amp;a[j+1]);}
+        }
+    }
+}
+
+
+int main()
+{
+    int a[N];
+    input(a,N);
+    sort(a,N);
+    print(a,N);
+}
+</code></pre>
+<h1 id="选十佳">选十佳</h1>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>暑期学习</title>
         <author>

@@ -10,6 +10,19 @@
     },
     "items": [
         {
+            "id": "https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html",
+            "url": "https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html",
+            "title": "数据结构实验教程",
+            "content_html": "<p>/<em>标准C++17</em>/</p><h1 id=\"指针的简单应用\">指针的简单应用</h1>\n<pre><code class=\"language-c++17\">#include &lt;iostream&gt;\n#include &lt;stdio.h&gt;\n#include &lt;malloc.h&gt;\n\nint main()\n{\n    int x;\n    int *q,*p;\n    //p default set scanf x value;\n    //q is default set for malloc;\n    x=10;\n    p=&amp;x;\n    q=(int *)malloc(100);\n    *q=100;\n    printf(&quot;*p=%d,*q=%d\\n&quot;,*p,*q);\n    free(q);\n    return 0;\n}\n</code></pre>\n<h1 id=\"销售排行榜\">销售排行榜</h1>\n<pre><code class=\"language-c++17\">dingyi.h\n#ifndef DINGYI_H\n#define DINGYI_H\n#define N 8\n#endif //DINGYI_H\n</code></pre>\n<pre><code class=\"language-c++17\">#include &lt;stdio.h&gt;\n#include &quot;dingyi.h&quot;\n\nvoid printXing(int n)\n{\n    for(int i=0;i&lt;N;i++)\n    {\n        printf(&quot;*****&quot;);\n    }\n    printf(&quot;\\n&quot;);\n}\nvoid input(int a[],int n)\n{\n    printXing(10);\n    printf(&quot;请输入%d个人的销售量\\n&quot;,n);\n    for(int i=0;i&lt;n;i++)\n    {\n        scanf(&quot;%d&quot;,&amp;a[i]);\n    }\n    printXing(10);\n}\nvoid print(int a[],int n)\n{\n    // printXing(10);\n    printf(&quot;%d个人的销售量排行榜如下:\\n&quot;,n);\n    for(int i=0;i&lt;n;i++)\n    {\n        printf(&quot;%3d &quot;,a[i]);\n        // printf(&quot;\\n&quot;);\n        // printXing(10);\n    }\n};\n\nvoid swap(int *x, int *y)\n{\n    int t;\n    t = *x;\n    *x = *y;\n    *y = t;\n}\n//sort的作用就是一个一个比较. 8 和 7. 8和6这样一个一个比.\nvoid sort(int a[],int n)\n{\n    for(int i=0;i&lt;N;i++)\n    {\n        for(int j=0;j&lt;N-1;j++)\n        {\n            if(a[j]&lt;a[j+1]){swap(&amp;a[j],&amp;a[j+1]);}\n        }\n    }\n}\n\n\nint main()\n{\n    int a[N];\n    input(a,N);\n    sort(a,N);\n    print(a,N);\n}\n</code></pre>\n<h1 id=\"选十佳\">选十佳</h1>\n",
+            "author": {
+                "name": "d1omg"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-09-15T22:18:28+08:00",
+            "date_modified": "2024-09-15T22:20:13+08:00"
+        },
+        {
             "id": "https://sharenjun.github.io/shu-qi-xue-xi.html",
             "url": "https://sharenjun.github.io/shu-qi-xue-xi.html",
             "title": "暑期学习",
