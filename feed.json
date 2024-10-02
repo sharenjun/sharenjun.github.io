@@ -10,6 +10,19 @@
     },
     "items": [
         {
+            "id": "https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi.html",
+            "url": "https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi.html",
+            "title": "数据结构题练习",
+            "content_html": "<h1 id=\"已知线性表（a1-a2-a3-an）按顺序存于内存，每个元素都是非零整数，试设计用最少时间把所有值为负数的元素移到全部正数值元素前边的算法：例：（x-x-xxx-x-x）变为（-x-x-xxxx）\">已知线性表（a1 a2 a3 …an）按顺序存于内存，每个元素都是非零整数，试设计用最少时间把所有值为负数的元素移到全部正数值元素前边的算法：例：（x,-x,-x,x,x,-x …x）变为（-x,-x,-x…x,x,x）</h1>\n<pre><code class=\"language-c++\">#include &lt;iostream&gt;\n\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\nvoid ReRange(int arr[],int n)\n{\n    int k=0;//标志小于0的数\n    for(int i = 0;i&lt;n;i++)\n    {//循环开始，循环一整个数组的.\n        //调试\n        // printf(&quot;%d &quot;,arr[i]);\n        if(arr[i]&lt;0)\n        {\n            //i和k不能相等\n            if(i!=k)\n            {\n                //交换\n                swap(&amp;arr[i],&amp;arr[k]);\n            }\n            k++;\n        }\n    }\n}\nvoid PrintArr(int arr[],int n)\n{\n    for(int i =0;i&lt;n;i++)\n    {\n        printf(&quot;%d &quot;,arr[i]);\n    }\n    printf(&quot;\\n&quot;);\n}\n\nint main()\n{\n    int arr[] = {4, -3, 2, -7, 1, -9, 8, -6, 5};\n    int n=sizeof(arr)/sizeof(arr[0]);\n    ReRange(arr,n);\n    PrintArr(arr,n);\n    return 0;\n}\n</code></pre>\n<h1 id=\"试编写在带头结点的单链表l中删除（一个）最小值结点的（高效）算法。\">试编写在带头结点的单链表L中删除（一个）最小值结点的（高效）算法。</h1>\n<pre><code class=\"language-c++\">#include &quot;main2.h&quot;\n#include &lt;stdio.h&gt;\n#include &lt;stdlib.h&gt;\ntypedef  int E;\ntypedef struct Lnode\n{\n    E data;//Lnode结构体的数据域\n    struct Lnode *next;//Lnode结构体的next指针\n}Lnode,*p_Lnode;\n\nvoid Init_Lnode(p_Lnode &amp;L)\n{\n    L=(p_Lnode)malloc(sizeof(Lnode));\n    L-&gt;next=NULL;\n}\n\nvoid Insert_tail(p_Lnode &amp;L,E element)\n{\n    p_Lnode s,r=L;\n    while (r-&gt;next)\n    {\n        r=r-&gt;next;\n    }\n    s=(p_Lnode)malloc(sizeof(Lnode));\n    s-&gt;data=element;\n    s-&gt;next=NULL;//尾插法就是需要把数据域的最后一个置为空;\n    r-&gt;next=s;\n}\nvoid PrintChain(p_Lnode L)\n{\n    L=L-&gt;next;//跳过头节点\n    int i =0;\n    while (L!=NULL)\n    {\n        printf(&quot;%d &quot;,L-&gt;data);\n        L=L-&gt;next;\n        i++;\n    }\n}\nvoid DeleteChainElement(p_Lnode &amp;L)\n{\n    if(L==NULL||L-&gt;next==NULL) return;\n\n    p_Lnode pre=L;//设置第一个数字的指针,指向头节点\n    p_Lnode p=pre-&gt;next;//设置p指针，指向第一个数据节点\n    p_Lnode minpre=pre;//保留最小值节点的前驱节点\n    p_Lnode min=p;//保留最小数值的节点\n\n    while (p!=NULL)//这里应该时p!=NULL.因为p=pre-&gt;next一直在变\n    {\n        if(p-&gt;data &lt; min-&gt;data)\n        {\n            min=p;//更新最小值节点\n            minpre=pre;//更新最小值节点的前驱节点\n        }\n        pre=p;\n        p=p-&gt;next;\n    }\n    minpre-&gt;next=min-&gt;next;//因为要释放掉节点了。所以改变了节点指向的位置\n    free(min);\n}\nint main()\n{\n    p_Lnode L;\n    Init_Lnode(L);\n    Insert_tail(L,9);\n    Insert_tail(L,2);\n    Insert_tail(L,3);\n    Insert_tail(L,4);\n    Insert_tail(L,6);\n    PrintChain(L);\n\n    printf(&quot;after delete element&quot;);\n    DeleteChainElement(L);\n    PrintChain(L);\n}\n</code></pre>\n<h1 id=\"对线性表l（a1an）\">对线性表L=（a1…an）</h1>\n<p>(1)如L为顺序表，请设计算法将L就地逆置。</p><p>(2)若L为带头结点的单链表，设计算法将L就地逆置。</p><p>知识点</p><p>将顺序表 逆置。</p><p>将带头结点的单链表逆置。</p><p>逆置考点在考研中也有涉及。</p>",
+            "author": {
+                "name": "d1omg"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-10-02T21:14:46+08:00",
+            "date_modified": "2024-10-02T21:14:46+08:00"
+        },
+        {
             "id": "https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html",
             "url": "https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html",
             "title": "数据结构实验教程",
