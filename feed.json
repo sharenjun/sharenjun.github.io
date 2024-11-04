@@ -10,6 +10,19 @@
     },
     "items": [
         {
+            "id": "https://sharenjun.github.io/fan-xu-lie-hua-zi-fu-chuan-tao-yi-xue-xi.html",
+            "url": "https://sharenjun.github.io/fan-xu-lie-hua-zi-fu-chuan-tao-yi-xue-xi.html",
+            "title": "反序列化字符串逃逸学习",
+            "content_html": "<pre><code class=\"language-php\">#字符串增多。\n&lt;?php\nfunction waf($fun)\n{\n    return str_replace(&#39;admin&#39;,&#39;hacker&#39;,$fun);\n}\nclass Info{\n    public $age;\n    public $nickname;\n}\n$a=new Info();\n$a-&gt;age=20;\n$a-&gt;nickname=&quot;wangsulu&quot;;\n\necho waf(serialize($a));\n</code></pre>\n<p>问:我想控制nickname是jiadaqu而不是wangsulu怎么办？</p><pre><code>首先正常序列化出来\nO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}\n取来我们需要的部分\n;s:8:&quot;wangsulu&quot;;\n在开头加&quot;结尾加}\n&quot;;s:8:&quot;jiadaqu&quot;;} 长度为17\n加在末尾\nO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}\n我们需要17个admin。\nadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}\n</code></pre>\n<pre><code class=\"language-php\">&lt;?php\nfunction waf($fun)\n{\n    return str_replace(&#39;admin&#39;,&#39;hacker&#39;,$fun);\n}\nclass Info{\n    public $age;\n    public $nickname;\n}\n$a=new Info();\n$a-&gt;age=20;\n$a-&gt;nickname=&quot;wangsulu&quot;;\n\n//echo waf(serialize($a));\n\necho serialize(waf(&#39;adminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&#39;));\n#经过这样序列化之后即可得到想要的。\n#s:179:&quot;hackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&quot;;\n</code></pre>\n<pre><code class=\"language-php\">#字符串减少\n&lt;?php\nfunction waf($fun)\n{\n    return str_replace(&#39;hacker&#39;,&#39;admin&#39;,$fun);\n}\nclass Info{\n    public $age;\n    public $nickname;\n}\n$a=new Info();\n$a-&gt;age=20;\n$a-&gt;nickname=&quot;wangsulu&quot;;\n\n//echo serialize($a);\n# 正常输出\n# O:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}\n# 与增加的思路差不多。就是我们要把吞掉多少字符给算出来。\n# 假设要&quot;;s:8:&quot;jiadaqu&quot;;}被显示出来。那么\n# ;s:8:&quot;wangsulu&quot;;}是17个。我们要吞掉17个字符。\n# O:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}\n$b=&#39;hackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&#39;;\necho waf(serialize($b));\n# 输出s:179:&quot;adminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&quot;;\n</code></pre>\n",
+            "author": {
+                "name": "d1omg"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-11-04T20:52:40+08:00",
+            "date_modified": "2024-11-04T20:52:40+08:00"
+        },
+        {
             "id": "https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi-2.html",
             "url": "https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi-2.html",
             "title": "数据结构题练习2",

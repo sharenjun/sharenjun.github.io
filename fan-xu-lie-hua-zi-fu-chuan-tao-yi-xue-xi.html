@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>反序列化字符串逃逸学习 - d1omg blog</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://sharenjun.github.io/fan-xu-lie-hua-zi-fu-chuan-tao-yi-xue-xi.html"><link rel="alternate" type="application/atom+xml" href="https://sharenjun.github.io/feed.xml"><link rel="alternate" type="application/json" href="https://sharenjun.github.io/feed.json"><meta property="og:title" content="反序列化字符串逃逸学习"><meta property="og:site_name" content="d1omg blog"><meta property="og:description" content=""><meta property="og:url" content="https://sharenjun.github.io/fan-xu-lie-hua-zi-fu-chuan-tao-yi-xue-xi.html"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://sharenjun.github.io/media/website/burpsuite_113238.ico" type="image/x-icon"><link rel="stylesheet" href="https://sharenjun.github.io/assets/css/style.css?v=6fbb1e8931a5afe843374fd67c192c86"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://sharenjun.github.io/fan-xu-lie-hua-zi-fu-chuan-tao-yi-xue-xi.html"},"headline":"反序列化字符串逃逸学习","datePublished":"2024-11-04T20:52","dateModified":"2024-11-04T20:52","description":"","author":{"@type":"Person","name":"d1omg","url":"https://sharenjun.github.io/authors/d1omg/"},"publisher":{"@type":"Organization","name":"d1omg"}}</script><noscript><style>img[loading] {
+                    opacity: 1;
+                }</style></noscript></head><body><div class="site-container"><header class="top" id="js-header"><a class="logo" href="https://sharenjun.github.io/">d1omg blog</a><div class="search"><div class="search__overlay js-search-overlay"><div class="search__overlay-inner"><button class="search__close js-search-close" aria-label="Close">Close</button></div></div><button class="search__btn js-search-btn" aria-label="Search"><svg role="presentation" focusable="false"><use xlink:href="https://sharenjun.github.io/assets/svg/svg-map.svg#search"/></svg></button></div></header><main><article class="post"><div class="hero"><figure class="hero__image hero__image--overlay"><img src="https://sharenjun.github.io/media/website/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440.png" srcset="https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-xs.png 300w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-sm.png 480w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-md.png 768w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-lg.png 1024w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-xl.png 1360w, https://sharenjun.github.io/media/website/responsive/img3.wallspic.com-sheng_dan_jie-xing_zhi-chuang_kou-lu_deng-dian_li-2560x1440-2xl.png 1600w" sizes="100vw" loading="eager" alt=""></figure><header class="hero__content"><div class="wrapper"><div class="post__meta"><time datetime="2024-11-04T20:52">November 4, 2024</time></div><h1>反序列化字符串逃逸学习</h1><div class="post__meta post__meta--author"><a href="https://sharenjun.github.io/authors/d1omg/" class="feed__author">d1omg</a></div></div></header></div><div class="wrapper post__entry"><pre><code class="language-php">#字符串增多。
+&lt;?php
+function waf($fun)
+{
+    return str_replace(&#39;admin&#39;,&#39;hacker&#39;,$fun);
+}
+class Info{
+    public $age;
+    public $nickname;
+}
+$a=new Info();
+$a-&gt;age=20;
+$a-&gt;nickname=&quot;wangsulu&quot;;
+
+echo waf(serialize($a));
+</code></pre><p>问:我想控制nickname是jiadaqu而不是wangsulu怎么办？</p><pre><code>首先正常序列化出来
+O:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}
+取来我们需要的部分
+;s:8:&quot;wangsulu&quot;;
+在开头加&quot;结尾加}
+&quot;;s:8:&quot;jiadaqu&quot;;} 长度为17
+加在末尾
+O:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}
+我们需要17个admin。
+adminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}
+</code></pre><pre><code class="language-php">&lt;?php
+function waf($fun)
+{
+    return str_replace(&#39;admin&#39;,&#39;hacker&#39;,$fun);
+}
+class Info{
+    public $age;
+    public $nickname;
+}
+$a=new Info();
+$a-&gt;age=20;
+$a-&gt;nickname=&quot;wangsulu&quot;;
+
+//echo waf(serialize($a));
+
+echo serialize(waf(&#39;adminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&#39;));
+#经过这样序列化之后即可得到想要的。
+#s:179:&quot;hackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&quot;;
+</code></pre><pre><code class="language-php">#字符串减少
+&lt;?php
+function waf($fun)
+{
+    return str_replace(&#39;hacker&#39;,&#39;admin&#39;,$fun);
+}
+class Info{
+    public $age;
+    public $nickname;
+}
+$a=new Info();
+$a-&gt;age=20;
+$a-&gt;nickname=&quot;wangsulu&quot;;
+
+//echo serialize($a);
+# 正常输出
+# O:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}
+# 与增加的思路差不多。就是我们要把吞掉多少字符给算出来。
+# 假设要&quot;;s:8:&quot;jiadaqu&quot;;}被显示出来。那么
+# ;s:8:&quot;wangsulu&quot;;}是17个。我们要吞掉17个字符。
+# O:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}
+$b=&#39;hackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&#39;;
+echo waf(serialize($b));
+# 输出s:179:&quot;adminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&quot;;
+</code></pre></div><footer class="wrapper post__footer"><p class="post__last-updated">This article was updated on November 4, 2024</p><div class="post__share"></div><div class="post__bio bio"><div><h3 class="bio__name"><a href="https://sharenjun.github.io/authors/d1omg/" rel="author">d1omg</a></h3></div></div></footer></article><nav class="post__nav"><div class="post__nav-inner"><div class="post__nav-prev"><svg width="1.041em" height="0.416em" aria-hidden="true"><use xlink:href="https://sharenjun.github.io/assets/svg/svg-map.svg#arrow-prev"/></svg> <a href="https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi-2.html" class="post__nav-link" rel="prev"><span>Previous</span> 数据结构题练习2</a></div></div></nav></main><footer class="footer"><div class="footer__copyright"><p>Powered by Publii</p></div><button onclick="backToTopFunction()" id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg><use xlink:href="https://sharenjun.github.io/assets/svg/svg-map.svg#toparrow"/></svg></button></footer></div><script defer="defer" src="https://sharenjun.github.io/assets/js/scripts.min.js?v=f47c11534595205f20935f0db2a62a85"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script></body></html>
